@@ -1,0 +1,19 @@
+{
+  "name": "schrodinger",
+  "version": "1.0.0",
+  "description": "A writeup of important aspects of the schrodinger equation",
+  "main": "index.js",
+  "scripts": {
+    "build": "node src/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/biosfood/schrodinger.git"
+  },
+  "author": "Lukas Eisenhauer",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/biosfood/schrodinger/issues"
+  },
+  "homepage": "https://github.com/biosfood/schrodinger#readme"
+}

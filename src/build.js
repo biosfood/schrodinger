@@ -20,21 +20,48 @@ const articleEntries = fs.readdirSync(articleFolder).reduce((o, fileName) => ({
   [fileName.replace(".md", "")]: fs.readFileSync(`${articleFolder}/${fileName}`, 'utf8').split("\n")
 }), {});
 
+const applyBigMathMode = line => line.replace(/\$\$/, bigMathMode ? "\\]" : "\\[")
+const applyMathMode = line => line.replace(/\$/, mathMode ? "\\)" : "\\(")
+
+function processMathModes(line) {
+  var bigMathModeReplace = applyBigMathMode(line);
+  while (bigMathModeReplace != line) {
+    line = bigMathModeReplace;
+    bigMathMode = !bigMathMode;
+    bigMathModeReplace = applyBigMathMode(line);
+  }
+
+  var mathModeReplace = applyMathMode(line)
+  while (mathModeReplace != line) {
+    line = mathModeReplace;
+    mathMode = !mathMode;
+    mathModeReplace = applyMathMode(line);
+  }
+  return line
+}
+
 for (const [name, data] of Object.entries(articleEntries)) {
+  var mathMode = false;
+  var bigMathMode = false;
   data.forEach((line, index) => {
+    const noSpaces = line.replace(" ", "");
+    if (noSpaces == "") {
+      line = "</p><p>";
+    }
     for (var i = 1; i < 5; i++) {
       const headerStart = `${"#".repeat(i)} `
       if (line.startsWith(headerStart)) {
         line = `<h${i}>${line.substring(i+1)}</h${i}>`
-        data[index] = line;
       }
     }
+    line = processMathModes(line);
+    data[index] = line;
   });
 }
 
 console.log("processing article entries...");
 for (const [name, data] of Object.entries(articleEntries)) {
-  articleEntries[name] = data.join("\n");
+  articleEntries[name] = data.join("");
 }
 
 

@@ -10,4 +10,4 @@ Install all necessary packages:
 Build the article files:
 ```npm run build```
 
-The article build uses the [https://github.com/morhetz/gruvbox](gruvbox theme)
+The article build uses the [gruvbox theme](https://github.com/morhetz/gruvbox)

@@ -5,7 +5,7 @@
 This article will cover the schrodinger equation, which represents a non-relativistic differential equation governing
 quantum particles. Relativistic effects are not taken into account here.
 
-## Deriviation
+## Derivation
 
 It should be mentioned that the schrodinger equation cannot be derived traditionally but rather represents a
 semi-logical conclusion from a number of assumptions/axioms.
@@ -49,3 +49,12 @@ p}{\hbar}$ and obtain $p = -i*\hbar*\frac{\partial{\Psi}}{\partial{x}}$. Pluggin
 equation, we obtain the time-independent schrodinger equation:
 
 $$ \hat{E} * \Psi = -\frac{\hbar^2}{2*m} * \frac{\partial^2 \Psi}{\partial^2 x} + V*\Psi$$
+
+You might also note that the total [energy of a photon](https://en.wikipedia.org/wiki/Photon_energy) can be expressed as
+$E_{ph} = h * f = \frac{h*p*v}{h} = p * v$. Using the x-derivative is not convenient, but you might note that
+$\frac{\partial \Psi}{\partial t} = \frac{-i*p*v}{\hbar}$. We can rewrite this as $E = p*v = i * \hbar * \frac{\partial
+\Psi}{\partial t}$
+
+Substituting this relation into the time-independent Schrodinger equation, the time-dependent can be obtained:
+
+$$ i * \hbar * \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2*m} * \frac{\partial^2 \Psi}{\partial^2 x} + V*\Psi$$

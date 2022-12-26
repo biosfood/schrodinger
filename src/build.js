@@ -61,7 +61,7 @@ for (const [name, data] of Object.entries(articleEntries)) {
 
 console.log("processing article entries...");
 for (const [name, data] of Object.entries(articleEntries)) {
-  articleEntries[name] = data.join("");
+  articleEntries[name] = data.join(" ");
 }
 
 

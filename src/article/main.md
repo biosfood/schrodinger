@@ -1,7 +1,7 @@
 %English
 # The schrodinger equation
 %German
-# Die Schr&ouml;dinger Gleichung
+# Die Schr"odinger Gleichung
 
 %English
 ## Preface

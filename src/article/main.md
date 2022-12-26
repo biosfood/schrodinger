@@ -12,9 +12,9 @@ semi-logical conclusion from a number of assumptions/axioms.
 
 ### Known properties of traditional waves
 
-In quantum mechanics, particles are assumed to be governed by a wave function. [Louis-
-de-Broglie](https://de.wikipedia.org/wiki/Louis_de_Broglie) postulated that matter waves should have the same wavelength
-as photons, whose wavelength depends on their respective impulse:
+In quantum mechanics, particles are assumed to be governed by a wave function.
+[Louis-de-Broglie](https://de.wikipedia.org/wiki/Louis_de_Broglie) postulated that matter waves should have the same
+wavelength as photons, whose wavelength depends on their respective impulse:
 
 $$\lambda = \frac{h}{p} = \frac{h}{m*v} $$
 

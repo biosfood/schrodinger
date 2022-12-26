@@ -20,6 +20,8 @@ const articleEntries = fs.readdirSync(articleFolder).reduce((o, fileName) => ({
   [fileName.replace(".md", "")]: fs.readFileSync(`${articleFolder}/${fileName}`, 'utf8').split("\n")
 }), {});
 
+console.log("processing article entries...");
+
 const applyBigMathMode = line => line.replace(/\$\$/, bigMathMode ? "\\]" : "\\[")
 const applyMathMode = line => line.replace(/\$/, mathMode ? "\\)" : "\\(")
 
@@ -40,6 +42,19 @@ function processMathModes(line) {
   return line
 }
 
+function processLinks(line) {
+  const links = line.match(/\[.*\]\(.*\)/)
+  if (!links) {
+    return line;
+  }
+  links.forEach(link => {
+    const target = link.match(/(?<=\().*(?=\))/)[0]
+    const name = link.match(/(?<=\[).*(?=\])/)[0]
+    line = line.replace(link, `<a href="${target}">${name}</a>`)
+  });
+  return line;
+}
+
 for (const [name, data] of Object.entries(articleEntries)) {
   var mathMode = false;
   var bigMathMode = false;
@@ -54,12 +69,12 @@ for (const [name, data] of Object.entries(articleEntries)) {
         line = `<h${i}>${line.substring(i+1)}</h${i}>`
       }
     }
+    line = processLinks(line);
     line = processMathModes(line);
     data[index] = line;
   });
 }
 
-console.log("processing article entries...");
 for (const [name, data] of Object.entries(articleEntries)) {
   articleEntries[name] = data.join(" ");
 }

@@ -4,6 +4,8 @@ const { exec } = require("child_process");
 const buildFolder = "build"
 const articleFolder = "src/article"
 
+const languages = ["German", "English"]
+
 console.log("clearing the build folder...");
 
 fs.rmSync(`${buildFolder}`, { recursive: true, force: true }, (error) => {if (error) {console.error(error);}});
@@ -55,13 +57,26 @@ function processLinks(line) {
   return line;
 }
 
+var result = Object.keys(articleEntries).reduce((o, name) => ({
+  ...o,
+  [name]: languages.reduce((o, language) => ({
+    ...o,
+    [language]: ""
+  }), {})
+}), {})
+
 for (const [name, data] of Object.entries(articleEntries)) {
-  var mathMode = false;
-  var bigMathMode = false;
+  var mathMode = false
+  var bigMathMode = false
+  var language = "common"
   data.forEach((line, index) => {
-    const noSpaces = line.replace(" ", "");
+    const noSpaces = line.replace(" ", "")
     if (noSpaces == "") {
-      line = "</p><p>";
+      line = "</p><p>"
+    }
+    if (noSpaces.startsWith("%")) {
+      language = noSpaces.substring(1)
+      return
     }
     for (var i = 1; i < 5; i++) {
       const headerStart = `${"#".repeat(i)} `
@@ -71,19 +86,22 @@ for (const [name, data] of Object.entries(articleEntries)) {
     }
     line = processLinks(line);
     line = processMathModes(line);
-    data[index] = line;
+    if (language == "common") {
+      languages.forEach(language => {
+        result[name][language] += `${line} `
+      })
+    } else {
+      result[name][language] += `${line} `
+    }
   });
 }
-
-for (const [name, data] of Object.entries(articleEntries)) {
-  articleEntries[name] = data.join(" ");
-}
-
 
 console.log("loading template...");
 const template = fs.readFileSync('src/template.html', 'utf8');
 
 console.log("writing articles...");
-for (const [name, data] of Object.entries(articleEntries)) {
-  fs.writeFile(`${buildFolder}/${name}.html`, template.replace("<DATA />", data), (error) => {});
+for (const [name, data] of Object.entries(result)) {
+  for (const [language, text] of Object.entries(data)) {
+    fs.writeFile(`${buildFolder}/${name}_${language}.html`, template.replace("<DATA />", text), (error) => {});
+  }
 }

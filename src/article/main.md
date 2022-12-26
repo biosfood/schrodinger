@@ -1,5 +1,9 @@
+%English
 # The schrodinger equation
+%German
+# Die Schr&ouml;dinger Gleichung
 
+%English
 ## Preface
 
 This article will cover the schrodinger equation, which represents a non-relativistic differential equation governing
@@ -16,12 +20,16 @@ In quantum mechanics, particles are assumed to be governed by a wave function.
 [Louis-de-Broglie](https://de.wikipedia.org/wiki/Louis_de_Broglie) postulated that matter waves should have the same
 wavelength as photons, whose wavelength depends on their respective impulse:
 
+%common
 $$\lambda = \frac{h}{p} = \frac{h}{m*v} $$
 
+%English
 A basic wave function for a travelling monochromatic wave can be written as:
 
+%common
 $$ \Psi = \cos(k*x - \omega * t) = e^{i*(k*x - \omega * t)} $$
 
+%English
 Schrodinger assumed that a matter wave should have the same wave form. From this, we can derive $k =
 \frac{2*\pi}{\lambda} = \frac{2 * \pi * p}{h} $, using the de-Broglie-wavelength as mentioned above. With $ v = f *
 \lambda $ for each wave, one can also conclude that $\omega = 2 * \pi * f = 2 * \pi * \frac{v}{\lambda} = \frac{2 * \pi

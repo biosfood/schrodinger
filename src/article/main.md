@@ -1,42 +1,85 @@
 %English
-# The schrodinger equation
+# The Schrodinger Equation
 %German
 # Die Schr"odinger Gleichung
 
 %English
 ## Preface
+%German
+## Vorwort
 
-This article will cover the schrodinger equation, which represents a non-relativistic differential equation governing
+%English
+This article will cover the Schrodinger Equation, which represents a non-relativistic differential equation governing
 quantum particles. Relativistic effects are not taken into account here.
+%German
+Dieser Artikel wird sich mit der sogenannten Schr"odinger Gleichung besch"aftigen, eine nicht-relativistische
+Differenzialgleichung zur Beschreibung der Wellenfunktion von Quantenobjekten.
 
+%English
 ## Derivation
+%German
+## Herleitung
 
-It should be mentioned that the schrodinger equation cannot be derived traditionally but rather represents a
+%English
+It should be mentioned that the Schrodinger Equation cannot be derived traditionally but rather represents a
 semi-logical conclusion from a number of assumptions/axioms.
+%German
+Es soll erw"ahnt sein, dass die Schr"odinger Gleichung nicht traditionell hergeleitet werden kann und statdessen eine
+halb-logische Folge einer Reihe an Annahmen und Axiomen darstellt.
 
+%English
 ### Known properties of traditional waves
+%German
+### Bekannte Eigenschaften traditioneller Wellen
 
+%English
 In quantum mechanics, particles are assumed to be governed by a wave function.
 [Louis-de-Broglie](https://de.wikipedia.org/wiki/Louis_de_Broglie) postulated that matter waves should have the same
 wavelength as photons, whose wavelength depends on their respective impulse:
+%German
+In der Quantenmechanik werden Teilchen durch ihre jeweilige Wellenfunktion modelliert.
+[Louis-de-Broglie](https://de.wikipedia.org/wiki/Louis_de_Broglie) postullierte, dass Materiewellen die selbe
+wellenl"ange wie Photonen mit demselben Impuls aufweisen:
 
 %common
 $$\lambda = \frac{h}{p} = \frac{h}{m*v} $$
 
 %English
 A basic wave function for a travelling monochromatic wave can be written as:
+%German
+Eine einfache Wellenfunktion f"ur eine monochromatische bewegte Welle kann folgenderma"sen geschrieben werden:
 
 %common
 $$ \Psi = \cos(k*x - \omega * t) = e^{i*(k*x - \omega * t)} $$
 
 %English
-Schrodinger assumed that a matter wave should have the same wave form. From this, we can derive $k =
-\frac{2*\pi}{\lambda} = \frac{2 * \pi * p}{h} $, using the de-Broglie-wavelength as mentioned above. With $ v = f *
-\lambda $ for each wave, one can also conclude that $\omega = 2 * \pi * f = 2 * \pi * \frac{v}{\lambda} = \frac{2 * \pi
-* v * p}{h} $. We can rewrite the wave function as follows:
+Schrodinger assumed that a matter wave should have the same wave form. From this, we can derive,
+%German
+Schrodinger nahm an, dass eine Materiewelle eine "ahnliche Wellenfunkoion aufweisen wu"rde. Aus dieser Wellenfunktion
+l"asst sich mithilfe der oben erw"ahnten de-Broglie-Wellenl"ange herleiten, dass
+%common
+$k = \frac{2*\pi}{\lambda} = \frac{2 * \pi * p}{h} $
+%English
+using the de-Broglie-wavelength as mentioned above. With
+%German
+Mit dem Wissen, dass
+%common
+$ v = f * \lambda $
+%English
+for each wave, one can also conclude that
+%German
+f"ur Welle gilt, l"asst sich auch folgern, dass folgende Beziehung stimmt:
+%common
+$\omega = 2 * \pi * f = 2 * \pi * \frac{v}{\lambda} = \frac{2 * \pi * v * p}{h} $.
+%English
+We can rewrite the wave function as follows:
+%German
+Deshalb l"asst sich die Wellenfunktion folgenderma"sen schreiben:
 
+%common
 $$ \Psi = e^{i*(\frac{2 * \pi * p}{h}*x - \frac{2 * \pi * v * p}{h} * t)} = e^{\frac{i*p}{\hbar}*(x - v*t)} $$
 
+%English
 ### Obtaining the Schrodinger equation through energy conversion
 
 The total sum of energy should be a constant for physical particles. For this,

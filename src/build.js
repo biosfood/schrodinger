@@ -68,12 +68,12 @@ var result = Object.keys(articleEntries).reduce((o, name) => ({
 const validUmlaute = "aeouAEOU"
 
 function processUmlaute(line) {
-  const matches = line.match(/(?!\\)\"[aeouAEOU]/)
+  const matches = line.match(/(?!\\)\"[aeouAEOU]/g)
   if (!matches) {
     return line
   }
   matches.forEach(umlaut => {
-    line = line.replace(umlaut, `&${umlaut.substring(1)}uml;`)
+    line = line.replaceAll(umlaut, `&${umlaut.substring(1)}uml;`)
   })
   return line
 }
@@ -85,7 +85,10 @@ for (const [name, data] of Object.entries(articleEntries)) {
   data.forEach((line, index) => {
     const noSpaces = line.replace(" ", "")
     if (noSpaces == "") {
-      line = "</p><p>"
+      languages.forEach(language => {
+        result[name][language] += "</p><p>"
+      })
+      return
     }
     if (noSpaces.startsWith("%")) {
       language = noSpaces.substring(1)
@@ -97,6 +100,7 @@ for (const [name, data] of Object.entries(articleEntries)) {
         line = `<h${i}>${line.substring(i+1)}</h${i}>`
       }
     }
+    line = line.replaceAll(/(?!\\)\"s/g, "&szlig;")
     line = processUmlaute(line)
     line = processLinks(line)
     line = processMathModes(line)

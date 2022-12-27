@@ -49,3 +49,12 @@ a {
   text-decoration: none;
   color: var(--green0);
 }
+
+.right {
+  text-align: right;
+}
+
+.right a {
+  font-size: 150%;
+  padding: 1ch;
+}

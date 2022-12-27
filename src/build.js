@@ -4,7 +4,12 @@ const { exec } = require("child_process");
 const buildFolder = "build"
 const articleFolder = "src/article"
 
-const languages = ["German", "English"]
+const flags = {
+  German:  '&#127465;&#127466;',
+  English: '&#127468;&#127463;',
+}
+
+const languages = Object.keys(flags)
 
 console.log("clearing the build folder...");
 
@@ -117,9 +122,20 @@ for (const [name, data] of Object.entries(articleEntries)) {
 console.log("loading template...");
 const template = fs.readFileSync('src/template.html', 'utf8');
 
+function generateLanguageSwitch(name) {
+  var result = ""
+  for (const [language, flag] of Object.entries(flags)) {
+    result += `<a href="${name}_${language}.html">${flag}</a>`
+  }
+  return result
+}
+
 console.log("writing articles...");
 for (const [name, data] of Object.entries(result)) {
   for (const [language, text] of Object.entries(data)) {
-    fs.writeFile(`${buildFolder}/${name}_${language}.html`, template.replace("<DATA />", text), (error) => {});
+    fs.writeFile(`${buildFolder}/${name}_${language}.html`, 
+                  template.replace("<DATA />", text)
+                          .replace("<LANGUAGE_SWITCH />", generateLanguageSwitch(name)),
+                  (error) => {});
   }
 }

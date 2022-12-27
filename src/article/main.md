@@ -81,31 +81,95 @@ $$ \Psi = e^{i*(\frac{2 * \pi * p}{h}*x - \frac{2 * \pi * v * p}{h} * t)} = e^{\
 
 %English
 ### Obtaining the Schrodinger equation through energy conversion
+%German
+### Herleitung der Schr"odinger Gleichung durch den Energieerhaltungssatz
 
-The total sum of energy should be a constant for physical particles. For this,
-the sum of the kinetic Energy $E_{kin} = \frac{p^{2}}{2*m}$ and potential energy $E_{pot} = V$, where V describes some
-arbitrary potential, which in practice will need to be multiplied by its respective "charge" of a particle (this could
-be its mass for a gravitational potential or the charge for electric fields) needs to stay constant. Thusly, one can
-write:
+%English
+The total sum of energies should be a constant for physical particles. For this, the sum of the
+kinetic Energy
+%German
+Die Summe der verschiedenen Energien eines Teilchens sollte nach dem Energieerhaltungssatz konstant seit. Dazu muss die
+Summe aus der kinetischen Energie
+%common
+$E_{kin} = \frac{p^{2}}{2*m}$
+%English
+and potential energy
+%German
+und der potentiellen Energie
+%common
+$E_{pot} = V$,
+%English
+need to be constant. Here, $V$ describes some arbitrary potential, which in practice will need to be multiplied by its
+respective "charge" of a particle (this could be its mass for a gravitational potential or the charge for electric
+fields). Thusly, one can write:
+%German
+konstant sein. Hierbei beschreibt $V$ ein beliebiges potential, das in der Praxis mit der entsprechenden "Ladung" des
+Teilchens multipliziert werden muss (Diese Ladung kann die Masse des Teilchens im Bezug auf das Gravitationsfeld oder
+die elektrische Ladung im elektrischen Feld darstellen). Deshalb l"asst sich schreiben:
 
+%common
 $$ E = E_{kin} + E_{pot} = \frac{p^{2}}{2*m} + V $$
-$$ \hat{E} * \Psi = \frac{\hat{p}^{2}}{2*m} * \Psi + V * \Psi $$
+$$ E * \Psi = \frac{p^{2}}{2*m} * \Psi + V * \Psi $$
 
-$\hat{E}$ and $\hat{p}$ are some (yet unknown) operators on $\Psi$ which respectively should return the impulse and
-total energy for the wave function. For wave function to be valid, this equation must be true. On the other hand, we can
-obtain these operators using the basic wave function mentioned above.
+$E$
+%English
+and
+%German
+und
+%Common
+$p$
+%English
+are some (yet unknown) operators on $\Psi$ which respectively should return the impulse and total energy for the wave
+function. For wave function to be valid, this equation must be true. On the other hand, we can obtain these operators
+using the basic wave function mentioned above.
+%German
+stellen zwei (noch unbekannte) operatoren auf $\Psi$ dar, die jeweils den den Impuls und Gesamtenergie der
+Wellenfunktion darstellen. Damit eine Wellenfunktion den Energieerhaltungssatz erf"ullt, muss diese Gleichung stimmen.
+Wiederum lassen sich diese Operatoren mithilfe der einfachen (oben erw"ahnten) Wellenfunktion herleiten.
 
-Noting the factor $p$ in the exponent of $\Psi$, you might write $\frac{\partial{\Psi}}{\partial{x}} = \frac{i *
-p}{\hbar}$ and obtain $p = -i*\hbar*\frac{\partial{\Psi}}{\partial{x}}$. Plugging this back into the energy conservation
-equation, we obtain the time-independent schrodinger equation:
+%English
+Noting the factor $p$ in the exponent of $\Psi$, you might write
+%German
+Bemerkt man den Faktor $p$ im Exponenten von $\Psi$ wie oben erw"ahnt la"sst sich schreiben:
+%common
+$\frac{\partial{\Psi}}{\partial{x}} = \frac{i *p}{\hbar} * \Psi$,
+%English
+and obtain
+%common
+$p * \Psi = -i*\hbar*\frac{\partial{\Psi}}{\partial{x}}$.
+%English
+Plugging this back into the energy conservation equation, we obtain the time-independent schrodinger equation:
+%German
+Mit dem Einsetzen in den Energieerhaltungssatz erh"alt man:
 
-$$ \hat{E} * \Psi = -\frac{\hbar^2}{2*m} * \frac{\partial^2 \Psi}{\partial^2 x} + V*\Psi$$
+%common
+$$ E * \Psi = -\frac{\hbar^2}{2*m} * \frac{\partial^2 \Psi}{\partial^2 x} + V*\Psi$$
 
+%Engish
 You might also note that the total [energy of a photon](https://en.wikipedia.org/wiki/Photon_energy) can be expressed as
-$E_{ph} = h * f = \frac{h*p*v}{h} = p * v$. Using the x-derivative is not convenient, but you might note that
-$\frac{\partial \Psi}{\partial t} = \frac{-i*p*v}{\hbar}$. We can rewrite this as $E = p*v = i * \hbar * \frac{\partial
-\Psi}{\partial t}$
+%German
+Auch ist zu beachten, dass die [Energie eines Photons](https://de.wikipedia.org/wiki/Photonenenergie) geschrieben werden
+kann als
+%common
+$E_{ph} = h * f = \frac{h*p*v}{h} = p * v$.
+%English
+Using the x-derivative is not convenient, but you might note that
+%German
+Die "ortliche Ableitung ist hier nicht sehr praktisch, aber man kann
+%common
+$\frac{\partial \Psi}{\partial t} = \frac{-i*p*v}{\hbar} * \Psi$
+%English
+.We can rewrite this as
+%German
+schreiben. Das kann auch ausgedr"uckt werden als
+%common
+$E*\Psi = p*v*\Psi = i * \hbar * \frac{\partial \Psi}{\partial t}$
 
+%English
 Substituting this relation into the time-independent Schrodinger equation, the time-dependent can be obtained:
+%German
+Mit dem Einsetzen dieses Zusammenhangs in die zeitunabh"angige Schr"odinger Gleichung kann die zeitabh"angige Form
+erhalten werden:
 
+%common
 $$ i * \hbar * \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2*m} * \frac{\partial^2 \Psi}{\partial^2 x} + V*\Psi$$

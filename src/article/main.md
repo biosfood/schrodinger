@@ -216,6 +216,7 @@ der zeitunabh"anigen Schr"odinger Gleichung modelliert werden:
 
 %common
 $$ E * \Psi = -\frac{\hbar^2}{2*m} * \frac{\partial^2 \Psi}{\partial^2 x}$$
+$$ \Psi = \Psi_{x} * \Psi_{t} $$
 
 %English
 You will notice the wave function needs to be proportional to its negated second derivative. This differential equation
@@ -225,4 +226,58 @@ Hier tritt hervor, dass die Wellenfunktion proportional zu ihrer negativen zweit
 Differenialgleichung l"asst sich durch eine Sinuswelle l"osen:
 
 %common
-$$\Psi_{x} = A * \sin(k*x + \alpha_{0}) $$
+$$\Psi_{x} = A * \sin(k*x + \alpha_{0}) \forall x \in [0;l] $$
+
+%English
+We want the wave function to be continuous, which enforces
+%German
+Die Wellenfunktion soll differenzierbar sein, was die Bedingung
+%common
+$ \Psi(0) = \Psi(l) = 0 $
+%English
+Because of this, we can set $\alpha_{0} = 0$, so that this relation holds true. In theory, $\alpha_{0}$ could be any
+whole number multiple of $\pi$, but the modulus squared of the wave function would stay identical. This is why we can
+rewrite this as:
+%German
+stellt. $\alhpa_{0} = 0$ erf"ullt diese Beziehung. Theorethisch k"onnte $\alpha_{0}$ ein beliebiges Vielfaches von $\pi$
+sein, jedoch bleibt das Betragsquadrat der Wellenfunktion dabei gleich. Deshalb soll nun gelten:
+
+%common
+$$ \Psi_{x} = A * \sin(k*x) \forall x \in [0; l]$$
+$$ \Psi(l) = 0 \Leftrightarrow \sin(k*x) = 0 \Leftrightarrow k = \frac{n*\pi}{l} \forall n \in \mathbb{N} $$
+
+%English
+This constraints $k$ to any multiple of $\frac{\pi}{l}$. We can use the time-dependent Schrodinger Equation to find
+$\Psi_{t}$.
+%German
+Das beschr"ankt $k$ auf eine Vielzahl von $\frac{\pi}{l}$. Wir k"onnen die zeitabh"angige Schr"odinger Gleichung nutzen,
+um $\Psi_{t}$ zu finden.
+
+%common
+$$ i * \hbar * \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2*m} * \frac{\partial^2 \Psi}{\partial^2 x}$$
+$$ i * \Psi_{x}* \frac{\partial \Psi_{t}}{\partial t} = -\frac{\hbar}{2*m} * \Psi_{t}* \frac{\partial^2
+\Psi_{x}}{\partial^2 x}$$
+$$ i * \Psi_{x} * \frac{\partial \Psi_{t}}{\partial t} = -\frac{\hbar}{2*m} * \Psi_{t} * k^2 * \Psi_{x}$$
+$$ \frac{\partial \Psi_{t}}{\partial t} = \frac{-i * \hbar * k^2}{2*m} * \Psi_{t} $$
+$$ \Psi_{t} = e^{\frac{-i * \hbar * k^2}{2*m} * t} $$
+$$ \Psi = e^{\frac{-i * \hbar * k^2}{2*m} * t} * \sin(k * x) $$
+
+%English
+One can also obtain the specific energy levels for this wave function:
+%Germany
+Man kann auch die speziellen Energieniveaus dieser Wellenfunktion erhalten:
+
+%common
+$$ E * \Psi = -\frac{\hbar^2}{2*m} * \frac{\partial^2 \Psi}{\partial^2 x}$$
+$$ E * \Psi = -\frac{\hbar^2}{2*m} * \Psi_{t} * (-k^2) * \Psi_{x}$$
+$$ E = \frac{\hbar^2 * k^2}{2*m} $$
+
+%English
+One can write the discrete energy levels for each $n$ as:
+%German
+F"ur jedes $n$ k"onnen die diskreten Energieniveas geschrieben werden als:
+
+%common
+$$ E_{n} = \frac{\hbar^2*n^2*\pi^2}{2*m*l^2} = \frac{h^2}{8*m*l^2} * n^2 $$
+$$ \Psi = e^{\frac{-i * \hbar * n^2*\pi^2}{2*m*l^2} * t} * \sin(\frac{n*\pi}{l} * x) $$
+$$ \Psi = e^{\frac{-i * h * n^2*\pi}{4*m*l^2} * t} * \sin(\frac{n*\pi*x}{l}) $$

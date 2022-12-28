@@ -279,5 +279,80 @@ F"ur jedes $n$ k"onnen die diskreten Energieniveas geschrieben werden als:
 
 %common
 $$ E_{n} = \frac{\hbar^2*n^2*\pi^2}{2*m*l^2} = \frac{h^2}{8*m*l^2} * n^2 $$
-$$ \Psi = e^{\frac{-i * \hbar * n^2*\pi^2}{2*m*l^2} * t} * \sin(\frac{n*\pi}{l} * x) $$
-$$ \Psi = e^{\frac{-i * h * n^2*\pi}{4*m*l^2} * t} * \sin(\frac{n*\pi*x}{l}) $$
+$$ \Psi = A *e^{\frac{-i * \hbar * n^2*\pi^2}{2*m*l^2} * t} * \sin(\frac{n*\pi}{l} * x) $$
+$$ \Psi = A * e^{\frac{-i * h * n^2*\pi}{4*m*l^2} * t} * \sin(\frac{n*\pi*x}{l}) $$
+
+%English
+### Photon emmission
+%German
+### Photonenemmision
+
+%English
+While an electron is transitioning from one energy level to another, we can model it as being on both states at the same
+time, a superposition of states:
+%German
+W"ahrend ein Elektron sich im "Ubergang von einem Energieniveau zu einem anderem befindet, kann man es als eine
+"Uberlagerung dieser beiden Zust"ande betrachten, die eine Superposition genannt wird:
+
+%common
+$$ \Psi = \Psi_{n_1} + \Psi_{n_2} $$
+
+%English
+The probability density of finding the electron at a certain position can be modeled as a charge density of the electron
+being distributed in space. This density is equal to the modulus squared of the wave function:
+%German
+Die Wahrscheinlichkeitsdichte, das Elektron in einem bestimmten St"uck Raum zu finden kann auch als die Ladungsdicht des
+Elektrons, die im Raum verteilt ist, aufgefasst werden. Diese Dicht ist gleich dem Betragsquadrat der Wellenfunktion:
+
+%common
+$$ \rho = |\Psi|^2 = |\Psi_{n_1} + \Psi_{n_2}|^2 $$
+
+%English
+The modulus squared of a complex value can be written as the product of the number and its complex conjugate, keeping in
+mid that $e^{x}*e^{-x} = 1$:
+%German
+Das Betragsquadrat einer kompllexen Zahl kann geschrieben werden als das Produkt der Zahl und ihres komplexen Konjugats,
+wobei beachtet werden sollte, dass $e^{x}*e^{-x} = 1$:
+
+%common
+$$ |a+ib|^2 = (a+ib)\overline{(a+ib)} (a+ib)(a-ib) = a^2 + b^2 $$
+$$ |\Psi|^2 = (\Psi_{1} + \Psi_{2})*(\overline{\Psi_{1}} + \overline{\Psi_{2}}) $$
+$$ |\Psi|^2 = \Psi_{x1}^2 + \Psi_{x2}^2 +
+(\sin(k_1*x) * sin(k_2*x) * e^{\frac{i*\hbar*k_1^2}{2*m}*t}*e^{\frac{-i*\hbar*k_2^2}{2*m}*t}) +
+(\sin(k_1*x) * sin(k_2*x) * e^{\frac{i*\hbar*k_2^2}{2*m}*t}*e^{\frac{-i*\hbar*k_1^2}{2*m}*t}) $$
+$$ |\Psi|^2 = A^2*(\sin^2(k_1*x) + \sin^2(k_2*x) +
+(\sin(k_1*x) * sin(k_2*x) * (e^{\frac{i*\hbar}{2*m}*(k_1^2-k_2^2)*t} + e^{\frac{i*\hbar}{2*m}*(k_2^2-k_1^2)*t})$$
+$$ |\Psi|^2 = A^2*(\sin^2(k_1*x) + \sin^2(k_2*x) + (2*\sin(k_1*x) * sin(k_2*x) * \cos((k_1^2-k_2^2)*t)$$
+
+%English
+This probability density now depends on time with the factor $(2*\sin(k_1*x) * sin(k_2*x) * \cos((k_1^2-k_2^2)*t)$. This
+tells us, that the particle or its charge can be found at different points in time. When visualizing this relation for
+$n_1 = 1$ and $n_2 = 2$, the particle oscillates between the two ends of the box. For the frequency of this oscillation,
+we can deduce that
+%German
+Diese Wahrscheinlichkeitsverteilung h"angt jetzt vom zeitlichen Faktor $(2*\sin(k_1*x) * sin(k_2*x) *
+\cos((k_1^2-k_2^2)*t)$ ab. Dies beschreibt eine Oszillation der Ladungsverteilung zwischen verschiedenen Positionen.
+Wenn diese Verteilung f"ur $n_1 = 1$ und $n_2 = 2$ visualisiert wird, zeigt sich, dass das Teilchen zwischen den beiden
+Enden des Potentialtopfes oszilliert. F"ur die Frequenz dieser Oszillation gilt:
+
+%common
+$$ \omega = \frac{\hbar}{2*m}*(k_1^2-k_2^2) \Leftrightarrow f = \frac{\omega}{2*\pi} =
+\frac{\hbar}{2*m*2*\pi}*((k_1^2-k_2^2)) $$
+
+%English
+An oscillation of a charged particle can generally generate electromagnetic radiation. For a photon with frequency $f$,
+we know:
+%German
+Eine oszillierende Ladung generiert generell elektromagnetische Strahlung. F"ur ein Photon mit Frequenz $f$ ist bekannt,
+dass
+
+%common
+$$ E_{ph} = h * f = \frac{\hbar * h}{2*m*2*\pi}*((k_1^2-k_2^2)) = \frac{\hbar^2}{2*m}*(k_1^2-k_2^2) = E_1 - E_2 $$
+
+%English
+You will notice, that the energy of the emitted photon is equal to the difference of the combined energies. This models
+light emission or absorbtion through transitions of quantum states of electrons.
+%German
+Man bemkerkt, dass die Energie des emmittierten Photons gleich der Differenz der Energien der kombinierten
+Quantenzust"anden. Dies stellt eine konkrete Modellierung des Zustands"ubergangs eines Elektrons durch Lichteinstrahlung
+oder Lichemission dar.

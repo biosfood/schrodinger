@@ -140,7 +140,7 @@ $p * \Psi = -i*\hbar*\frac{\partial{\Psi}}{\partial{x}}$.
 %English
 Plugging this back into the energy conservation equation, we obtain the time-independent schrodinger equation:
 %German
-Mit dem Einsetzen in den Energieerhaltungssatz erh"alt man:
+Mit dem Einsetzen in den Energieerhaltungssatz erh"alt man die zeit-unabh"angige Schr"odinger Gleichung:
 
 %common
 $$ E * \Psi = -\frac{\hbar^2}{2*m} * \frac{\partial^2 \Psi}{\partial^2 x} + V*\Psi$$
@@ -173,3 +173,56 @@ erhalten werden:
 
 %common
 $$ i * \hbar * \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2*m} * \frac{\partial^2 \Psi}{\partial^2 x} + V*\Psi$$
+
+%English
+## Solving the Schrodinger Equation
+%German
+## L"osen der Schr"odinger Gleichung
+
+%English
+### Particle in a box
+%German
+### Teilchen im eindimensionalen Potentialtopf
+
+%English
+A simple way to describe a confined electron (as in inside of an atom) is to create a potential which is equal to $0$
+inside of the $l$ long box and $\infty$ elsewhere.
+%German
+Eine simple Methode, ein lokal eingegrenztes Elektron (z.B in einem Atom eingegrenzt) ist die Modellierung anhand eines
+Potentialtopfes, der innerhalb des $l$ langen Bereichs ein Potential von $0$ aufweist und das Potential ansonsten
+$\infty$ ist.
+
+%common
+$$ V = 0 \forall x \in [0; l] $$
+$$ V = \infty \forall x \notin [0; l] $$
+
+%English
+The particle can only be found inside of the box which only permits the wave function to not equal $0$ inside of the
+box. Also keep in mind that continuity needs to be preserved in the wave function.
+%German
+Das Teilchen kann nur innerhalb des Potentialtopfes gefunden werden. Deshalb darf die Wellenfunktion nur innerhalb des
+Topfes existieren und gleich $0$ Au"serhalb.
+
+%common
+$$ \Psi = 0 \forall x \notin [0, l] $$
+$$ \Psi \in \mathbb{C} \forall x \in [0, l] $$
+
+%English
+Inside of the box, we can assume the particle to be stationary. This is why you can try solving this situation using the
+time-independent Schrodinger Equation:
+%German
+Innerhalb des Potentialtopfes kann das Teilchen als station"ar angeshen werden. Deshalb kann diese Situation mithilfe
+der zeitunabh"anigen Schr"odinger Gleichung modelliert werden:
+
+%common
+$$ E * \Psi = -\frac{\hbar^2}{2*m} * \frac{\partial^2 \Psi}{\partial^2 x}$$
+
+%English
+You will notice the wave function needs to be proportional to its negated second derivative. This differential equation
+is solved by a sine wave:
+%German
+Hier tritt hervor, dass die Wellenfunktion proportional zu ihrer negativen zweiten Ableitung sein muss. Diese
+Differenialgleichung l"asst sich durch eine Sinuswelle l"osen:
+
+%common
+$$\Psi_{x} = A * \sin(k*x + \alpha_{0}) $$

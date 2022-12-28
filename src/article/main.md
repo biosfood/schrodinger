@@ -116,7 +116,7 @@ $E$
 and
 %German
 und
-%Common
+%common
 $p$
 %English
 are some (yet unknown) operators on $\Psi$ which respectively should return the impulse and total energy for the wave
@@ -145,7 +145,7 @@ Mit dem Einsetzen in den Energieerhaltungssatz erh"alt man die zeit-unabh"angige
 %common
 $$ E * \Psi = -\frac{\hbar^2}{2*m} * \frac{\partial^2 \Psi}{\partial^2 x} + V*\Psi$$
 
-%Engish
+%English
 You might also note that the total [energy of a photon](https://en.wikipedia.org/wiki/Photon_energy) can be expressed as
 %German
 Auch ist zu beachten, dass die [Energie eines Photons](https://de.wikipedia.org/wiki/Photonenenergie) geschrieben werden

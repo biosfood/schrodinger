@@ -239,7 +239,7 @@ Because of this, we can set $\alpha_{0} = 0$, so that this relation holds true. 
 whole number multiple of $\pi$, but the modulus squared of the wave function would stay identical. This is why we can
 rewrite this as:
 %German
-stellt. $\alhpa_{0} = 0$ erf"ullt diese Beziehung. Theorethisch k"onnte $\alpha_{0}$ ein beliebiges Vielfaches von $\pi$
+stellt. $\alpha_{0} = 0$ erf"ullt diese Beziehung. Theorethisch k"onnte $\alpha_{0}$ ein beliebiges Vielfaches von $\pi$
 sein, jedoch bleibt das Betragsquadrat der Wellenfunktion dabei gleich. Deshalb soll nun gelten:
 
 %common
@@ -356,3 +356,64 @@ light emission or absorbtion through transitions of quantum states of electrons.
 Man bemkerkt, dass die Energie des emmittierten Photons gleich der Differenz der Energien der kombinierten
 Quantenzust"anden. Dies stellt eine konkrete Modellierung des Zustands"ubergangs eines Elektrons durch Lichteinstrahlung
 oder Lichemission dar.
+
+%English
+## The Schrodinger Equation in momentum space
+%German
+## Die Schr"odinger Gleichung im Impulsraum
+
+%English
+As mentioned above, a simple plain wave with a certain impulse can solve the Schrodinger Equation. Because a
+superposition of valid waves is also a solution to the wave equation, we can write the combined wave function as:
+%German
+Wie im Vorigen erw"ahnt, kann eine einfache Welle mit speziellen Impuls die Schr"odinger Gleichung l"osen. Weil auch
+eine "Uberlagerung von validen Wellen eine L"osing darstellt, l"asst sich die kombinierte Wellenfunktion schreiben als:
+
+%common
+$$ \Psi_x = \sum^n_{i=0} e^{k_n*x}*\psi(p_n) $$
+
+%English
+When using an indefinite amount of waves, one can express any wave equation using another wave equation $\psi$ (giving
+weight to each impulse) as:
+%German
+Mit der Anwendung mit einem unendlicher Zahl an Wellen, kann jede Wellenfunktion mit einer anderen Wellenfunktion $\psi$
+(die jedem Impuls ein Gewicht zuteilt) ausgedr"uckt werden:
+
+%common
+$$ \Psi_x = \int_{-\infty}^{\infty} \psi(p) * e^{k(p)*x} dp $$
+$$ \Psi_x = \int_{-\infty}^{\infty} \psi * e^{\frac{p*x}{\hbar}} dp $$
+
+%English
+We can deduce that there exists a wave function $\Psi$ for every $\psi$. If we create a Transformation $F(\Psi) = \psi$
+which converts between the two formats and apply it to the Schrodinger equation (V = 0 here to simplify everything), we
+get:
+%German
+Es l"asst sich folgern, dass f"ur jede Wellenfunktion $\Psi$ eine korrespondierende L"osing f"ur $\psi$ existiert. Wenn
+wir eine Transformation $F(\Psi) = \psi$ erstellen, die zwischen den beiden Repr"asentationen konvertiert und sie auf
+die Schr"odinger Gleichung anwenden (mit $V=0$ stets) erhalten wir:
+
+%common
+$$ F(i * \hbar * \frac{\partial \Psi}{\partial t}) = F(\frac{p^2}{2*m} * \Psi)$$
+$$ i*\hbar*\frac{\partial \psi}{\partial t} = \frac{p^2}{2*m}*\psi$$
+$$ \frac{\partial \psi}{\partial t} = \frac{p^2}{2*m*i*\hbar}*\psi$$
+
+%English
+This differential equation has an easy solution for every $\psi_0$:
+%German
+Diese Differentialgleichung hat eine einfache L"osung f"ur jedes $\psi_0$:
+
+%common
+$$ \psi = e^{i*\omega*t} * \psi_0$$
+$$ i * \omega * \psi = \frac{p^2}{2*m*i*\hbar} * \psi$$
+$$ \omega = -\frac{p^2}{2*m*\hbar}$$
+$$ \psi = e^{-\frac{i*p^2}{2*m*\hbar}*t} * \psi_0$$
+
+%English
+Because $|e^{i*x}| = 1$ for every x, we can say that the modulus squared of $\psi$ stays constant as in $|\psi|^2 =
+|\psi_0|^2$. Because the probability of measuring the impulse of a particle corresponds to $\psi$, we can conclude that
+the impulse of a particle stays constant as long as no force is acting upon it.
+%German
+Da $|e^{i*x}| = 1$ f"ur jedes $x$ gilt, l"asst sich sagen, dass das Betragsquadrat von $\psi$ zeitlich konstant ist
+$|\psi|^2$ = |\psi_0|^2$. Da die Wahrscheinlichkeitsverteilung des Impulses mit dem Betragsquadrat von $\psi$
+zusammenh"angt, l"asst sich folgern, dass der Impuls eines Teilchens konstant bleibt, solange keine Kraft auf das
+Teilchen wirkt.

@@ -414,6 +414,52 @@ Because $|e^{i*x}| = 1$ for every x, we can say that the modulus squared of $\ps
 the impulse of a particle stays constant as long as no force is acting upon it.
 %German
 Da $|e^{i*x}| = 1$ f"ur jedes $x$ gilt, l"asst sich sagen, dass das Betragsquadrat von $\psi$ zeitlich konstant ist
-$|\psi|^2$ = |\psi_0|^2$. Da die Wahrscheinlichkeitsverteilung des Impulses mit dem Betragsquadrat von $\psi$
+$|\psi|^2 = |\psi_0|^2$. Da die Wahrscheinlichkeitsverteilung des Impulses mit dem Betragsquadrat von $\psi$
 zusammenh"angt, l"asst sich folgern, dass der Impuls eines Teilchens konstant bleibt, solange keine Kraft auf das
 Teilchen wirkt.
+
+%English
+### Free, localized particle
+%German
+### Freies, lokalisiertes Teilchen
+
+%English
+Let us now try and write a wave function for a particle that has been located at $x=0$ with certainty $\sigma$. For
+this, I will first write $\Psi_0$ at the time of localization:
+%German
+Als n"achstes soll ein Versuch gewagt werden, eine Wellenfunktion f"ur ein freies Teilchen, das bei $x=0$ mit Sicherheit
+$\sigma$ lokalisiert wurde. Daf"ur werde ich zuerst $\Psi_0$, zum Zeitpunkt der Messung:
+
+%common
+$$ \Psi_0 = A * e^{-\frac{x^2}{\sigma^2}} $$
+
+%English
+The fourier Transform $F$ can be used to convert this initial wave function to momentum space:
+%German
+Die Fourier Transformation $F$ kann verwendet werden, um diese anf"angliche Wellenfunktion in den Impulsraum zu
+transformieren:
+
+%common
+$$ \psi_0 = \int_{-\infty}^{\infty} \Psi_0 * e^{-i*x*k} dx = \frac{A*\sigma}{\sqrt{2}} * e^{-\frac{k^2*\sigma^2}{4}} $$
+$$ \psi = e^{-\frac{i*p^2}{2*m*\hbar}*t} * \frac{A*\sigma}{\sqrt{2}} * e^{-\frac{k^2*\sigma^2}{4}} =
+\frac{A*\sigma}{\sqrt{2}} * e^{-\frac{k^2*\sigma^2}{4}-\frac{i*k^2*\hbar}{2*m}*t} =
+\frac{A*\sigma}{\sqrt{2}} * e^{-\frac{k^2}{2}*(\frac{\sigma^2}{2}+\frac{i*\hbar}{m}*t)} $$
+
+%English
+$\Psi$ can be obtained through the inverse Fourier Transform
+%German
+$\Psi$ kann durch die inverse Fourier-Transformation erlangt werden
+
+%common
+$$ \Psi = \int_{-\infty}^{\infty} \psi * e^{i*x*k} dk = \frac{A*\sigma}{\sqrt{2}*\sqrt{2}} *
+\frac{1}{\sqrt{\frac{\sigma^2}{4}+\frac{i*\hbar}{2*m}*t}} * e^{-\frac{x^2}{2*(\frac{\sigma^2}{2}+\frac{i*\hbar}{m}*t}}$$
+
+$$ \Psi = \frac{A*\sigma}{\sqrt{\sigma^2 + \frac{i*2*\hbar}{m}*t}} * e^{-\frac{x^2}{\sigma^2+\frac{i*\hbar*2}{m}*t}}
+$$
+
+%English
+You will find that the width of the wave packet steadily increases, meaning the position of the particle becomes less
+well known over time, while its speed (proportional to its momentum) stays equally well known.
+%German
+Es zeigt sich, dass die Breite des Wellenpakets mit der Zeit stets steight. Das bedeutet, dass die Position des
+Teilchens eine gr"o"sere Unsicherheit aufweist, w"ahrend die Unsicherheit im Impuls gleich bleibt.

@@ -236,7 +236,7 @@ Die Wellenfunktion soll differenzierbar sein, was die Bedingung
 $ \Psi(0) = \Psi(l) = 0 $
 %English
 Because of this, we can set $\alpha_{0} = 0$, so that this relation holds true. In theory, $\alpha_{0}$ could be any
-whole number multiple of $\pi$, but the modulus squared of the wave function would stay identical. This is why we can
+whole number multiple of $\pi$, but the absolute squared of the wave function would stay identical. This is why we can
 rewrite this as:
 %German
 stellt. $\alpha_{0} = 0$ erf"ullt diese Beziehung. Theorethisch k"onnte $\alpha_{0}$ ein beliebiges Vielfaches von $\pi$
@@ -299,7 +299,7 @@ $$ \Psi = \Psi_{n_1} + \Psi_{n_2} $$
 
 %English
 The probability density of finding the electron at a certain position can be modeled as a charge density of the electron
-being distributed in space. This density is equal to the modulus squared of the wave function:
+being distributed in space. This density is equal to the absolute squared of the wave function:
 %German
 Die Wahrscheinlichkeitsdichte, das Elektron in einem bestimmten St"uck Raum zu finden kann auch als die Ladungsdicht des
 Elektrons, die im Raum verteilt ist, aufgefasst werden. Diese Dicht ist gleich dem Betragsquadrat der Wellenfunktion:
@@ -308,7 +308,8 @@ Elektrons, die im Raum verteilt ist, aufgefasst werden. Diese Dicht ist gleich d
 $$ \rho = |\Psi|^2 = |\Psi_{n_1} + \Psi_{n_2}|^2 $$
 
 %English
-The modulus squared of a complex value can be written as the product of the number and its complex conjugate, keeping in
+The absolute squared of a complex value can be written as the product of the number and its complex conjugate, keeping
+in
 mid that $e^{x}*e^{-x} = 1$:
 %German
 Das Betragsquadrat einer kompllexen Zahl kann geschrieben werden als das Produkt der Zahl und ihres komplexen Konjugats,
@@ -409,7 +410,7 @@ $$ \omega = -\frac{p^2}{2*m*\hbar}$$
 $$ \psi = e^{-\frac{i*p^2}{2*m*\hbar}*t} * \psi_0$$
 
 %English
-Because $|e^{i*x}| = 1$ for every x, we can say that the modulus squared of $\psi$ stays constant as in $|\psi|^2 =
+Because $|e^{i*x}| = 1$ for every x, we can say that the absolute squared of $\psi$ stays constant as in $|\psi|^2 =
 |\psi_0|^2$. Because the probability of measuring the impulse of a particle corresponds to $\psi$, we can conclude that
 the impulse of a particle stays constant as long as no force is acting upon it.
 %German

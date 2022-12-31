@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/biosfood/schrodinger/issues"
   },
-  "homepage": "https://github.com/biosfood/schrodinger#readme"
+  "homepage": "https://github.com/biosfood/schrodinger#readme",
+  "dependencies": {
+    "reveal.js": "^4.4.0"
+  }
 }

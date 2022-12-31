@@ -480,7 +480,8 @@ $w$ modelliert werden. Die Wellenpakete weisen einen Abstannd von $2*d$ auf.
 %common
 $$ \sigma = \frac{d}{2} $$
 $$ \Psi = \frac{A*\sigma}{\sqrt{\sigma^2 + \frac{i*2*\hbar}{m}*t}} *
-(e^{-\frac{(x+d)^2}{\sigma^2+\frac{i*\hbar*2}{m}*t}} + e^{-\frac{(x-d)^2}{\sigma^2+\frac{i*\hbar*2}{m}*t}}) $$
+(e^{-\frac{(x+\frac{d}{2})^2}{\sigma^2+\frac{i*\hbar*2}{m}*t}} +
+e^{-\frac{(x-\frac{d}{2})^2}{\sigma^2+\frac{i*\hbar*2}{m}*t}}) $$
 
 %English
 For simplicity, all factors in the front will be disregarded. Two complex wave interfere constructively, whenever their
@@ -492,28 +493,28 @@ ganzzahliges Vielfaches von $2*\pi$ unterscheiden.
 
 %common
 $$ n \in \mathbb{Z} $$
-$$ \Im(-\frac{(x+d)^2}{\sigma^2+\frac{i*\hbar*2}{m}*t}) = \Im(-\frac{(x-d)^2}{\sigma^2+\frac{i*\hbar*2}{m}*t}) +
+$$ \Im(-\frac{(x+\frac{d}{2})^2}{\sigma^2+\frac{i*\hbar*2}{m}*t}) =
+\Im(-\frac{(x-\frac{d}{2})^2}{\sigma^2+\frac{i*\hbar*2}{m}*t}) +
 2*\pi*n $$
 
-$$ \Im(-\frac{(x+d)^2 * (\sigma^2-\frac{i*\hbar*2}{m}*t)}{(\sigma^2+\frac{i*\hbar*2}{m}*t) *
+$$ \Im(-\frac{(x+\frac{d}{2})^2 * (\sigma^2-\frac{i*\hbar*2}{m}*t)}{(\sigma^2+\frac{i*\hbar*2}{m}*t) *
 (\sigma^2-\frac{i*\hbar*2}{m}*t)}) =
-\Im(-\frac{(x+d)^2 * (\sigma^2-\frac{i*\hbar*2}{m}*t)}{(\sigma^2+\frac{i*\hbar*2}{m}*t) *
+\Im(-\frac{(x+\frac{d}{2})^2 * (\sigma^2-\frac{i*\hbar*2}{m}*t)}{(\sigma^2+\frac{i*\hbar*2}{m}*t) *
 (\sigma^2-\frac{i*\hbar*2}{m}*t)}) +
 2*\pi*n $$
 
-$$ \frac{(x+d)^2 * \frac{2*\hbar*t}{m}}{\sigma^4+\frac{4*\hbar^2*t^2}{m^2}}) =
-\frac{(x-d)^2 * \frac{2*\hbar*t}{m}}{\sigma^4+\frac{4*\hbar^2*t^2}{m^2}}) +
+$$ \frac{(x+\frac{d}{2})^2 * \frac{2*\hbar*t}{m}}{\sigma^4+\frac{4*\hbar^2*t^2}{m^2}}) =
+\frac{(x-\frac{d}{2})^2 * \frac{2*\hbar*t}{m}}{\sigma^4+\frac{4*\hbar^2*t^2}{m^2}}) +
+2*\pi*n $$
+
+$$ \frac{\frac{d*x*2*\hbar*t}{m}}{\sigma^4+\frac{4*\hbar^2*t^2}{m^2}}) =
+\frac{-\frac{d*x*2*\hbar*t}{m}}{\sigma^4+\frac{4*\hbar^2*t^2}{m^2}}) =
 2*\pi*n $$
 
 $$ \frac{\frac{4*d*x*\hbar*t}{m}}{\sigma^4+\frac{4*\hbar^2*t^2}{m^2}}) =
-\frac{-\frac{4*d*x*\hbar*t}{m}}{\sigma^4+\frac{4*\hbar^2*t^2}{m^2}}) =
 2*\pi*n $$
 
-$$ \frac{\frac{8*d*x*\hbar*t}{m}}{\sigma^4+\frac{4*\hbar^2*t^2}{m^2}}) =
-2*\pi*n $$
-
-$$ x_{max} = \frac{2*\pi*n*m * (\sigma^4+\frac{4*\hbar^2*t^2}{m^2})}{8*d*\hbar*t} = \frac{n*m *
-(\sigma^4+\frac{4*\hbar^2*t^2}{m^2})}{8*d*h*t} $$
+$$ x_{max} = \frac{2*\pi*n*m * (\sigma^4+\frac{4*\hbar^2*t^2}{m^2})}{4*d*\hbar*t}$$
 
 %English
 For big $t$, we get evenly spaced maxima in the wave function, corresponding to bright spots on a real-world experiment.
@@ -523,4 +524,18 @@ F"ur gro"se $t$ ergeben sich gleichm"a"sig verteilte Maxima in der Wellenfunktio
 Punkten auf einem Schirm entsprechen. Auch gibt es Minima, jeweils bei
 
 %common
-$$ x_{min} = \frac{(n-0.5)*m * (\sigma^4+\frac{4*\hbar^2*t^2}{m^2})}{8*d*h*t} $$
+$$ x_{min} = \frac{2*\pi*(n-0.5)*m * (\sigma^4+\frac{4*\hbar^2*t^2}{m^2})}{4*d*\hbar*t}$$
+
+%English
+Assuming $\sigma^4 \ll \frac{4*\hbar^2*t^2}{m^2}$, the first part of the numerator vanishes.
+%German
+Angenommen $\sigma^4 \ll \frac{4*\hbar^2*t^2}{m^2}$ verschwindet der erste Teil des Z"ahlers.
+
+%common
+$$ x_{max} = \frac{2*\pi*n*m * \frac{4*\hbar^2*t^2}{m^2}}{4*d*\hbar*t} = \frac{2*\pi*n*m *
+4*\hbar^2*t^2}{4*d*\hbar*t*m^2} = \frac{n*h*t}{d*m} = \frac{n*h*s}{d*m*v} = \frac{n*\lambda*s}{d}$$
+
+%English
+This relation is equivalent to the traditional formulation for the double slit experiment.
+%German
+Diese Formulierung ist "aquivalent zur traditionellen Formulierung des Doppelspaltexperiments.

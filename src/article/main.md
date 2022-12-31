@@ -264,7 +264,7 @@ $$ \Psi = e^{\frac{-i * \hbar * k^2}{2*m} * t} * \sin(k * x) $$
 
 %English
 One can also obtain the specific energy levels for this wave function:
-%Germany
+%German
 Man kann auch die speziellen Energieniveaus dieser Wellenfunktion erhalten:
 
 %common

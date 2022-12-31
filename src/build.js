@@ -2,41 +2,29 @@ import { rmSync, existsSync, mkdirSync, readdirSync, readFileSync, writeFile } f
 import { exec } from "child_process"
 import {processMarkdown} from './markdown.js'
 
+const links = {
+  "../../node_modules/reveal.js/dist/reveal.css": "build/css/",
+  "../../node_modules/reveal.js/dist/theme/moon.css": "build/css/",
+  "../../node_modules/reveal.js/dist/reveal.js": "build/js/",
+  "../../src/static/css/style.css": "build/css/",
+}
+
 const buildFolder = "build"
-const articleFolder = "src/article"
 
 const flags = {
   German:  '&#127465;&#127466;',
   English: '&#127468;&#127463;',
 }
-
 const languages = Object.keys(flags)
 
-console.log("clearing the build folder...");
+const formats = ['article', 'presentation']
 
-rmSync(`${buildFolder}`, { recursive: true, force: true }, (error) => {if (error) {console.error(error);}});
-if (!existsSync(buildFolder)) {
-  mkdirSync(buildFolder);
+function readDirectory(directory) {
+  return readdirSync(directory).reduce((o, fileName) => ({
+    ...o,
+    [fileName.replace(".md", "")]: processMarkdown(readFileSync(`${directory}/${fileName}`, 'utf8').split("\n"), languages)
+  }), {});
 }
-
-console.log("linking static files...");
-exec(`ls src/static | while read in; do ln ../src/static/$in ${buildFolder} -s; done`)
-
-console.log("reading article files...");
-const articleEntries = readdirSync(articleFolder).reduce((o, fileName) => ({
-  ...o,
-  [fileName.replace(".md", "")]: readFileSync(`${articleFolder}/${fileName}`, 'utf8').split("\n")
-}), {});
-
-console.log("processing article entries...");
-
-var result = Object.keys(articleEntries).reduce((o, name) => ({
-  ...o,
-  [name]: processMarkdown(articleEntries[name], languages)
-}), {})
-
-console.log("loading template...");
-const template = readFileSync('src/template.html', 'utf8');
 
 function generateLanguageSwitch(name) {
   var result = ""
@@ -46,12 +34,43 @@ function generateLanguageSwitch(name) {
   return result
 }
 
-console.log("writing articles...");
-for (const [name, data] of Object.entries(result)) {
-  for (const [language, text] of Object.entries(data)) {
-    writeFile(`${buildFolder}/${name}_${language}.html`, 
-                  template.replace("<DATA />", text)
-                          .replace("<LANGUAGE_SWITCH />", generateLanguageSwitch(name)),
-                  (error) => {});
+console.log("clearing the build folder...");
+
+rmSync(`${buildFolder}`, { recursive: true, force: true }, (error) => {if (error) {console.error(error);}});
+if (!existsSync(buildFolder)) {
+  mkdirSync(buildFolder);
+}
+if (!existsSync(buildFolder + "/css")) {
+  mkdirSync(buildFolder + "/css");
+}
+if (!existsSync(buildFolder + "/js")) {
+  mkdirSync(buildFolder + "/js");
+}
+
+console.log("linking static files...")
+for (const [from, to] of Object.entries(links)) {
+  exec(`ln ${from} ${to} -s`)
+}
+
+console.log("reading files...")
+const data = formats.reduce((o, format) =>  ({
+  ...o,
+  [format]: {
+    data: readDirectory(`src/${format}/`),
+    template: readFileSync(`src/template_${format}.html`, 'utf8')
+  }
+}), {})
+
+console.log("writing files...");
+for (const [format, formatData] of Object.entries(data)) {
+  for (const [name, data] of Object.entries(formatData.data)) {
+    for (const [language, text] of Object.entries(data)) {
+      writeFile(`${buildFolder}/${format}_${name}_${language}.html`, 
+                formatData.template
+                .replace("<DATA />", text)
+                .replace("<LANGUAGE_SWITCH />", generateLanguageSwitch(name)),
+              (error) => {});
+
+    }
   }
 }

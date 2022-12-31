@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/biosfood/schrodinger.git"
   },
+  "type": "module",
   "author": "Lukas Eisenhauer",
   "license": "GPL-3.0-or-later",
   "bugs": {

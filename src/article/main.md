@@ -519,7 +519,7 @@ $$ x_{max} = \frac{2*\pi*n*m * (\sigma^4+\frac{4*\hbar^2*t^2}{m^2})}{8*d*\hbar*t
 For big $t$, we get evenly spaced maxima in the wave function, corresponding to bright spots on a real-world experiment.
 There will also be minima at every
 %German
-F"or gro"se $t$ ergeben sich gleichm"a"sig verteilte Maxima in der Wellenfunktion, die in realen Experimenten hellen
+F"ur gro"se $t$ ergeben sich gleichm"a"sig verteilte Maxima in der Wellenfunktion, die in realen Experimenten hellen
 Punkten auf einem Schirm entsprechen. Auch gibt es Minima, jeweils bei
 
 %common

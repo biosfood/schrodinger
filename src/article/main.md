@@ -464,3 +464,63 @@ well known over time, while its speed (proportional to its momentum) stays equal
 %German
 Es zeigt sich, dass die Breite des Wellenpakets mit der Zeit stets steight. Das bedeutet, dass die Position des
 Teilchens eine gr"o"sere Unsicherheit aufweist, w"ahrend die Unsicherheit im Impuls gleich bleibt.
+
+%English
+### The double slit experiment
+%German
+### Das Doppelspaltexperiment
+
+%English
+We can use the localized wave packet from before to model a particle being localized inside of one of two slits of size
+$w$ as a superposition of two wave packets. The wave packets have a distance of $2*d$.
+%German
+Das Doppelspaltexpperiment kann als eine "Uberlagerung von zwei lokaliseriten Wellenpakten in zwei Spalten mit Breite
+$w$ modelliert werden. Die Wellenpakete weisen einen Abstannd von $2*d$ auf.
+
+%common
+$$ \sigma = \frac{d}{2} $$
+$$ \Psi = \frac{A*\sigma}{\sqrt{\sigma^2 + \frac{i*2*\hbar}{m}*t}} *
+(e^{-\frac{(x+d)^2}{\sigma^2+\frac{i*\hbar*2}{m}*t}} + e^{-\frac{(x-d)^2}{\sigma^2+\frac{i*\hbar*2}{m}*t}}) $$
+
+%English
+For simplicity, all factors in the front will be disregarded. Two complex wave interfere constructively, whenever their
+phases align. This means the imaginary parts in the exponent need to vary by a whole number multiple of $2*\pi$.
+%German
+Zur Vereinfachung werden alle Faktoren im linken Teil vernachl"assigt. Zwei komplexe Wellen zeigen konstruktive
+Interferenz, wenn ihre Phasen zusammen fallen. Das bedeutet, dass sich die Imagin"arteile der Exponenten durch ein
+ganzzahliges Vielfaches von $2*\pi$ unterscheiden.
+
+%common
+$$ n \in \mathbb{Z} $$
+$$ \Im(-\frac{(x+d)^2}{\sigma^2+\frac{i*\hbar*2}{m}*t}) = \Im(-\frac{(x-d)^2}{\sigma^2+\frac{i*\hbar*2}{m}*t}) +
+2*\pi*n $$
+
+$$ \Im(-\frac{(x+d)^2 * (\sigma^2-\frac{i*\hbar*2}{m}*t)}{(\sigma^2+\frac{i*\hbar*2}{m}*t) *
+(\sigma^2-\frac{i*\hbar*2}{m}*t)}) =
+\Im(-\frac{(x+d)^2 * (\sigma^2-\frac{i*\hbar*2}{m}*t)}{(\sigma^2+\frac{i*\hbar*2}{m}*t) *
+(\sigma^2-\frac{i*\hbar*2}{m}*t)}) +
+2*\pi*n $$
+
+$$ \frac{(x+d)^2 * \frac{2*\hbar*t}{m}}{\sigma^4+\frac{4*\hbar^2*t^2}{m^2}}) =
+\frac{(x-d)^2 * \frac{2*\hbar*t}{m}}{\sigma^4+\frac{4*\hbar^2*t^2}{m^2}}) +
+2*\pi*n $$
+
+$$ \frac{\frac{4*d*x*\hbar*t}{m}}{\sigma^4+\frac{4*\hbar^2*t^2}{m^2}}) =
+\frac{-\frac{4*d*x*\hbar*t}{m}}{\sigma^4+\frac{4*\hbar^2*t^2}{m^2}}) =
+2*\pi*n $$
+
+$$ \frac{\frac{8*d*x*\hbar*t}{m}}{\sigma^4+\frac{4*\hbar^2*t^2}{m^2}}) =
+2*\pi*n $$
+
+$$ x_{max} = \frac{2*\pi*n*m * (\sigma^4+\frac{4*\hbar^2*t^2}{m^2})}{8*d*\hbar*t} = \frac{n*m *
+(\sigma^4+\frac{4*\hbar^2*t^2}{m^2})}{8*d*h*t} $$
+
+%English
+For big $t$, we get evenly spaced maxima in the wave function, corresponding to bright spots on a real-world experiment.
+There will also be minima at every
+%German
+F"or gro"se $t$ ergeben sich gleichm"a"sig verteilte Maxima in der Wellenfunktion, die in realen Experimenten hellen
+Punkten auf einem Schirm entsprechen. Auch gibt es Minima, jeweils bei
+
+%common
+$$ x_{min} = \frac{(n-0.5)*m * (\sigma^4+\frac{4*\hbar^2*t^2}{m^2})}{8*d*h*t} $$

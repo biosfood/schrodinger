@@ -7,6 +7,7 @@ const links = {
   "../../node_modules/reveal.js/dist/theme/moon.css": "build/css/",
   "../../node_modules/reveal.js/dist/reveal.js": "build/js/",
   "../../src/static/css/style.css": "build/css/",
+  "../../src/static/video/oscillator.mp4": "build/video"
 }
 
 const buildFolder = "build"
@@ -45,6 +46,9 @@ if (!existsSync(buildFolder + "/css")) {
 }
 if (!existsSync(buildFolder + "/js")) {
   mkdirSync(buildFolder + "/js");
+}
+if (!existsSync(buildFolder + "/video")) {
+  mkdirSync(buildFolder + "/video");
 }
 
 console.log("linking static files...")

@@ -7,8 +7,8 @@ outputFolder = "src/static/video/"
 omega = 2*np.pi * 0.25
 A = 1
 
-position = lambda t: A*np.sin(omega * t)
-speed = lambda t: A*np.cos(omega*t)
+position = lambda t: A*np.cos(omega * t)
+speed = lambda t: A*np.sin(omega*t)
 
 totalTime = 12
 framerate = 20
@@ -19,14 +19,14 @@ diagrammAx.axis("equal")
 diagrammAx.set_ylim(-1.5*A, 1.5*A)
 diagrammAx.set_xlim(-1.5*A, 1.5*A)
 diagrammAx.set_xlabel("x")
-diagrammGraph,  = diagrammAx.plot([0, 0], [0, 0], "o-")
+diagrammGraph,  = diagrammAx.plot([0, 1], [0, 0], "o-")
 
 phaseSpaceAx.axis("equal")
 phaseSpaceAx.set_ylim(-1.5*A, 1.5*A)
 phaseSpaceAx.set_xlim(-1.5*A, 1.5*A)
 phaseSpaceAx.set_xlabel("x")
 phaseSpaceAx.set_ylabel("v")
-phaseGraph, = phaseSpaceAx.plot([0, 0], [0, 1], "o-")
+phaseGraph, = phaseSpaceAx.plot([0, 0], [0, 0], "o-")
 
 positionAx.set_xlim(-1.5*A, 1.5*A)
 positionAx.set_ylim(0, totalTime)

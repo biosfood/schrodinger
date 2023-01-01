@@ -67,6 +67,12 @@ export function processMarkdown(data, languages) {
       })
       return
     }
+    if (noSpaces.startsWith("----")) {
+      languages.forEach(language => {
+        result[language] += "</p></section></section><section><section><p>"
+      })
+      return
+    }
     if (noSpaces.startsWith("---")) {
       languages.forEach(language => {
         result[language] += "</p></section><section><p>"

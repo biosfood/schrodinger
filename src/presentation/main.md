@@ -49,3 +49,11 @@ A*\cos(\omega * t) \\ \frac{\omega * A * \sin(\omega * t)}{\omega}\end{pmatrix}$
 <video autoplay loop>
   <source src="video/oscillator.mp4" type="video/mp4">
 </video>
+
+----
+
+### Wanderwelle
+
+<video autoplay loop>
+  <source src="video/travelling.mp4" type="video/mp4">
+</video>

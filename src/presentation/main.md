@@ -94,3 +94,94 @@ $$ \Psi = A*\circlearrowleft(k*x - \omega * t) \textcolor{red}{= A*e^{i(k*x-\ome
 $$ k = \frac{2*\pi*p}{h}, \omega = \frac{2 * \pi * v * p}{h} $$
 ;$$ \Psi = A*\circlearrowleft(\frac{2 * \pi * p}{h}*x - \frac{2 * \pi * v * p}{h} * t) $$
 ;$$ \Psi = A*\circlearrowleft(\frac{2*\pi*p}{h}*(x - v*t)) \textcolor{red}{= A*e^{\frac{i*p}{\hbar}*(x-v*t)}} $$
+
+----
+
+### Energieerhaltungssatz
+
+$$ \Psi = A*\circlearrowleft(\frac{2*\pi*p}{h}*(x - v*t)) \textcolor{red}{= A*e^{\frac{i*p}{\hbar}*(x-v*t)}} $$
+;$$ E_{ges} = E_{kin} + E_{pot} = \frac{p^2}{2*m} + V $$
+;$$ E_{ges} *\Psi = \frac{p^2}{2*m} * \Psi + V * \Psi $$
+
+---
+
+### Energieerhaltungssatz
+
+$$ \Psi = A*\circlearrowleft(\frac{2*\pi*p}{h}*(x - v*t)) \textcolor{red}{= A*e^{\frac{i*p}{\hbar}*(x-v*t)}} $$
+
+$$ E_{ges} *\Psi = \frac{p^2}{2*m} * \Psi + V * \Psi $$
+;$$ \frac{\partial \Psi}{\partial x} = \circlearrowleft(90\degree) * \frac{2*\pi*p}{h} * \Psi \textcolor{red}{=
+\frac{i*p}{\hbar} * \Psi} $$
+;$$ p = \circlearrowleft(-90\degree) * \frac{h}{2*\pi} * \frac{\partial \Psi}{\partial x} \textcolor{red}{=
+-i * \hbar * \frac{\partial \Psi}{\partial x}} $$
+
+---
+
+### Energieerhaltungssatz
+
+$$ \Psi = A*\circlearrowleft(\frac{2*\pi*p}{h}*(x - v*t)) \textcolor{red}{= A*e^{\frac{i*p}{\hbar}*(x-v*t)}} $$
+
+$$ E_{ges} *\Psi = \circlearrowleft(180\degree) * \frac{h^2}{8*m*\pi^2} * \frac{\partial^2 \Psi}{\partial^2 x} + V *
+\Psi $$
+;
+<div class=" small">
+  $$ E_{ges} *\Psi =- \frac{h^2}{8*m*\pi^2} * \frac{\partial^2 \Psi}{\partial^2 x} + V *\Psi
+  \textcolor{red}{=-\frac{\hbar^2}{2*m} * \frac{\partial^2 \Psi}{\partial^2 x} + V * \Psi } $$
+</div>
+
+---
+
+### Energieerhaltungssatz
+
+<div class=" small">
+  $$ E_{ges} *\Psi =- \frac{h^2}{8*m*\pi^2} * \frac{\partial^2 \Psi}{\partial^2 x} + V *\Psi
+  \textcolor{red}{=-\frac{\hbar^2}{2*m} * \frac{\partial^2 \Psi}{\partial^2 x} + V * \Psi } $$
+</div>
+
+$$ \Psi = A*\circlearrowleft(\frac{2*\pi*p}{h}*(x - v*t)) \textcolor{red}{= A*e^{\frac{i*p}{\hbar}*(x-v*t)}} $$
+
+;$$ E_{ph} = h*f = \frac{h*v}{\lambda} = \frac{h*v*p}{h} = v*p $$
+;$$ \frac{\partial \Psi}{\partial t} = -\circlearrowleft(90\degree) * \frac{2*\pi*p * v}{h} * \Psi$$
+
+---
+
+### Energieerhaltungssatz
+
+<div class=" small">
+  $$ E_{ges} *\Psi =- \frac{h^2}{8*m*\pi^2} * \frac{\partial^2 \Psi}{\partial^2 x} + V *\Psi
+  \textcolor{red}{=-\frac{\hbar^2}{2*m} * \frac{\partial^2 \Psi}{\partial^2 x} + V * \Psi } $$
+</div>
+
+$$ \Psi = A*\circlearrowleft(\frac{2*\pi*p}{h}*(x - v*t)) \textcolor{red}{= A*e^{\frac{i*p}{\hbar}*(x-v*t)}} $$
+
+$$ \frac{\partial \Psi}{\partial t} = -\circlearrowleft(90\degree) * \frac{2*\pi*p * v}{h} * \Psi$$
+
+;$$ p*v*\Psi = -\frac{\partial \Psi}{\partial t} * \frac{h}{2*\pi*\circlearrowleft(90\degree)}$$
+
+---
+
+### Energieerhaltungssatz
+
+<div class=" small">
+  $$ E_{ges} *\Psi =- \frac{h^2}{8*m*\pi^2} * \frac{\partial^2 \Psi}{\partial^2 x} + V *\Psi
+  \textcolor{red}{=-\frac{\hbar^2}{2*m} * \frac{\partial^2 \Psi}{\partial^2 x} + V * \Psi } $$
+</div>
+
+$$ \Psi = A*\circlearrowleft(\frac{2*\pi*p}{h}*(x - v*t)) \textcolor{red}{= A*e^{\frac{i*p}{\hbar}*(x-v*t)}} $$
+
+$$ p*v*\Psi = -\frac{\partial \Psi}{\partial t} * \frac{h}{2*\pi*\circlearrowleft(90\degree)}$$
+;$$ E_{ges} *\Psi = \circlearrowleft(90\degree)* \frac{h}{2*\pi} * \frac{\partial \Psi}{\partial t} \textcolor{red}{ =
+i*\hbar*\frac{\partial \Psi}{\partial t}}$$
+
+---
+
+### Die Schr"odinger Gleichung
+
+<div class=" small">
+  $$ \circlearrowleft(90\degree)* \frac{h}{2*\pi} * \frac{\partial \Psi}{\partial t} =- \frac{h^2}{8*m*\pi^2} *
+  \frac{\partial^2 \Psi}{\partial^2 x} + V *\Psi $$
+</div>
+<div class=" small">
+  $$\textcolor{red}{i*\hbar*\frac{\partial \Psi}{\partial t}=-\frac{\hbar^2}{2*m} * \frac{\partial^2 \Psi}{\partial^2
+  x} + V * \Psi } $$
+</div>

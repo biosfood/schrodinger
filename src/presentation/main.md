@@ -272,3 +272,47 @@ $$ |\Psi|^2 = A^2*(\sin^2(k_1*x) + \sin^2(k_2*x) + (2*\sin(k_1*x) * sin(k_2*x) *
 ;$$ f = \frac{h}{2*\pi*4*\pi*m} *(k_1^2 - k_2^2) $$
 ;$$ E_{ph} = h*f = \frac{h^2}{8*\pi^2*m} *(k_1^2 - k_2^2) $$
 ;$$ E_{ph} = E_1 - E_2 $$
+
+----
+
+### Impulsraum
+
+$$ \Psi_k = A*\circlearrowleft(k*x) \textcolor{red}{= A*e^{i(k*x)}}$$
+;$$ \Psi = \sum_{i=-\infty}^{\infty} a_n *\circlearrowleft(k_n*x) \textcolor{red}{=\sum_{n=-\infty}^{\infty} a_n*
+e^{i*k_n*x}}$$
+
+;$$ \Psi = \int_{-\infty}^{\infty} \psi* \circlearrowleft(k*x)* dk \textcolor{red}{=\int_{-\infty}^{\infty} \psi*
+e^{i*k*x}*dk}$$
+;$$ \Psi = \int \int \circlearrowleft(-k*x)*dx * \circlearrowleft(k*x)*dk * \Psi$$
+;$$ \psi = \int \circlearrowleft(-k*x)*\Psi*dx \textcolor{red}{=\int_{-\infty}^{\infty} \Psi*
+e^{-i*k*x}*dk}$$
+
+---
+
+### Impulsraum
+
+$$ \Psi = \int_{-\infty}^{\infty} \psi* \circlearrowleft(k*x)* dk \textcolor{red}{=\int_{-\infty}^{\infty} \psi*
+e^{i*k*x}*dk}$$
+
+;$$ \frac{\partial \Psi}{\partial k} = \psi* \circlearrowleft(k*x) \textcolor{red}{= \psi* e^{i*k*x}}$$
+;$$ \psi = \frac{\partial}{\partial k}* \circlearrowleft(-k*x)* \Psi \textcolor{red}{= \frac{\partial
+}{\partial k}* e^{-i*k*x} * \Psi}$$
+;$$ \psi = \circlearrowleft(-90\degree) * \circlearrowleft(-k*x)* \Psi \textcolor{red}{= -i*x* e^{-i*k*x} * \Psi}$$
+;$$ \int \psi *dx = \int \circlearrowleft(-90\degree) * \circlearrowleft(-k*x)* \Psi * dx \textcolor{red}{= \int -i*x*
+e^{-i*k*x} * \Psi *dx}$$
+;$$ F(x*\Psi) = \circlearrowleft(90\degree) * F(\Psi)\textcolor{red}{= i*F(\Psi)} $$
+
+---
+
+### Impulsraum
+
+$$ \Psi = \int_{-\infty}^{\infty} \psi* \circlearrowleft(k*x)* dk \textcolor{red}{=\int_{-\infty}^{\infty} \psi*
+e^{i*k*x}*dk}$$
+$$ \psi = \int \circlearrowleft(-k*x)*\Psi*dx \textcolor{red}{=\int_{-\infty}^{\infty} \Psi*
+e^{-i*k*x}*dk}$$
+
+$$ \frac{\partial \psi}{\partial k} = \int \frac{\partial}{\partial k}\circlearrowleft(-k*x)*\Psi*dx
+\textcolor{red}{=\int_{-\infty}^{\infty} \Psi*\frac{\partial}{\partial k}e^{-i*k*x}*dk} $$
+;$$ \frac{\partial \psi}{\partial k} = \int x*\circlearrowleft(-90\degree) * \circlearrowleft(-k*x)*\Psi*dx
+\textcolor{red}{=\int_{-\infty}^{\infty} -i*x*\Psi*e^{-i*k*x}*dk} $$
+;$$ \frac{\partial \psi}{\partial k} = \circlearrowleft(-90\degree)*F^{-1}(\Psi*k)\textcolor{red}{=-i*F^{-1}(\Psi*k)} $$

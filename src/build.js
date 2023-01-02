@@ -6,9 +6,11 @@ const links = {
   "../../node_modules/reveal.js/dist/reveal.css": "build/css/",
   "../../node_modules/reveal.js/dist/theme/moon.css": "build/css/",
   "../../node_modules/reveal.js/dist/reveal.js": "build/js/",
+  "../../node_modules/reveal.js/plugin/math/math.js": "build/js/",
   "../../src/static/css/style.css": "build/css/",
   "../../src/static/video/oscillator.mp4": "build/video",
   "../../src/static/video/travelling.mp4": "build/video",
+  "../../src/static/video/photon.mp4": "build/video",
 }
 
 const buildFolder = "build"

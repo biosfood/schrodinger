@@ -449,3 +449,41 @@ $$
 <video autoplay loop width="50%" height="50%">
   <source src="video/localized.mp4" type="video/mp4">
 </video>
+
+----
+
+### Das Doppelspaltexperiment
+
+$$ \Psi = \Psi_{lok}(x-\frac{d}{2}) + \Psi_{lok}(x+\frac{d}{2})$$
+
+;$$ \Delta\alpha = 2*\pi*n \forall n \in \mathbb{Z} $$
+
+;$$ \Psi_{lok} =
+A*e^{-\frac{x^2}{4*\sigma_x^2+\frac{h^2*t^2}{16*\pi^2*m^2*\sigma_x^2}}}*\circlearrowleft(\frac{x^2}{\frac{16*\sigma_x^4*\pi*m}{h*t}+\frac{h*t}{\pi*m}})
+$$
+
+;$$ \frac{(x+\frac{d}{2})^2}{\frac{16*\sigma_x^4*\pi*m}{h*t}+\frac{h*t}{\pi*m}} =
+\frac{(x-\frac{d}{2})^2}{\frac{16*\sigma_x^4*\pi*m}{h*t}+\frac{h*t}{\pi*m}} + 2*\pi*n$$
+
+;$$ \frac{x*d}{\frac{16*\sigma_x^4*\pi*m}{h*t}+\frac{h*t}{\pi*m}} =
+\frac{-x*d}{\frac{16*\sigma_x^4*\pi*m}{h*t}+\frac{h*t}{\pi*m}} + 2*\pi*n$$
+
+;$$ \frac{2*x*d}{\frac{16*\sigma_x^4*\pi*m}{h*t}+\frac{h*t}{\pi*m}} = 2*\pi*n$$
+
+---
+
+### Das Doppelspaltexperiment
+
+$$ \frac{2*x*d}{\frac{16*\sigma_x^4*\pi*m}{h*t}+\frac{h*t}{\pi*m}} = 2*\pi*n$$
+;$$ 2*x*d = 2*\pi*n * (\frac{16*\sigma_x^4*\pi*m}{h*t}+\frac{h*t}{\pi*m})$$
+;$$ x = \frac{\pi*n}{d} * (\frac{16*\sigma_x^4*\pi*m}{h*t}+\frac{h*t}{\pi*m})$$
+
+---
+
+### Das Doppelspaltexperiment
+
+$$ x = \frac{\pi*n}{d} * (\frac{16*\sigma_x^4*\pi*m}{h*t}+\frac{h*t}{\pi*m})$$
+;$$ \lim_{t\rightarrow \infty},v = \frac{s}{t} \Rightarrow t = \frac{s}{v} $$
+;$$ x = \frac{\pi*n}{d} * \frac{h*t}{\pi*m} = \frac{n*h*t}{d*m} = \frac{n*h*s}{d*m*v}$$
+;$$ \lambda = \frac{h}{p} = \frac{h}{m*v} $$
+;$$ x = \frac{n*s*\lambda}{d} $$

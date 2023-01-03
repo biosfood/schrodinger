@@ -12,22 +12,9 @@ sigma = 0.1
 m = 1
 h = 1
 
+x = np.linspace(-20, 20, 1000)
+
 waveFunction = lambda x, t: sigma / (np.sqrt(sigma**2+(2j*h*t/m))) * np.exp(-x**2/(sigma**2+2j*h*t/m))
-x = np.linspace(-20, 20, 100)
-
-fig, ax = plt.subplots()
-
-line, = ax.plot(x, waveFunction(x, 0))
-
-def animate(i):
-    line.set_ydata(waveFunction(x, i * dt / 10))
-    return line,
-
-ani = animation.FuncAnimation(
-    fig, animate, interval=1000/framerate, blit=True, save_count = framerate * time)
-ani.save(f"{outputFolder}gauss.mp4")
-plt.show()
-
 fig, ax = plt.subplots()
 
 ax.set_ylim(0,0.05)
@@ -40,9 +27,9 @@ def animate(i):
 
 ani = animation.FuncAnimation(
     fig, animate, interval=1000/framerate, blit=True, save_count = framerate * time)
-ani.save(f"{outputFolder}combined.mp4")
+ani.save(f"{outputFolder}doubleSlit.mp4")
 plt.show()
-
+exit()
 m = 9.1093837e-31 # electron mass
 t = 1e-7 # 1 s flight time
 d = 1e-8 # 1nm distance between slits

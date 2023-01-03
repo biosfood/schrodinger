@@ -487,3 +487,13 @@ $$ x = \frac{\pi*n}{d} * (\frac{16*\sigma_x^4*\pi*m}{h*t}+\frac{h*t}{\pi*m})$$
 ;$$ x = \frac{\pi*n}{d} * \frac{h*t}{\pi*m} = \frac{n*h*t}{d*m} = \frac{n*h*s}{d*m*v}$$
 ;$$ \lambda = \frac{h}{p} = \frac{h}{m*v} $$
 ;$$ x = \frac{n*s*\lambda}{d} $$
+
+---
+
+### Das Doppelspaltexperiment
+
+$$ x = \frac{n*s*\lambda}{d} $$
+
+<video autoplay loop width="50%" height="50%">
+  <source src="video/doubleSlit.mp4" type="video/mp4">
+</video>

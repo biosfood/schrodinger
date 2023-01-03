@@ -11,6 +11,7 @@ const links = {
   "../../src/static/video/oscillator.mp4": "build/video",
   "../../src/static/video/travelling.mp4": "build/video",
   "../../src/static/video/photon.mp4": "build/video",
+  "../../src/static/video/doubleSlit.mp4": "build/video",
   "../../src/static/video/localized.mp4": "build/video",
   "../../src/static/img/gauss.png": "build/img",
 }

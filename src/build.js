@@ -11,6 +11,7 @@ const links = {
   "../../src/static/video/oscillator.mp4": "build/video",
   "../../src/static/video/travelling.mp4": "build/video",
   "../../src/static/video/photon.mp4": "build/video",
+  "../../src/static/img/gauss.png": "build/img",
 }
 
 const buildFolder = "build"
@@ -52,6 +53,9 @@ if (!existsSync(buildFolder + "/js")) {
 }
 if (!existsSync(buildFolder + "/video")) {
   mkdirSync(buildFolder + "/video");
+}
+if (!existsSync(buildFolder + "/img")) {
+  mkdirSync(buildFolder + "/img");
 }
 
 console.log("linking static files...")

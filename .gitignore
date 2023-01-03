@@ -1,6 +1,7 @@
 build
 src/.ipynb_checkpoints
 src/static/video
+src/static/img
 
 # Logs
 logs

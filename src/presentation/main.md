@@ -352,3 +352,56 @@ $$\textcolor{red}{i*\frac{\partial \psi}{\partial t}} = \circlearrowleft(90\degr
 
 ;$$\psi = \circlearrowleft(\omega * t) * \psi_0 = \textcolor{red}{e^{i*\omega*t}*\psi_0}$$
 ;$$\omega = -\frac{h*k^2}{4*\pi*m}$$
+
+----
+
+### Ein lokalisiertes Teilchen
+
+$$ |\Psi|^2 = \frac{1}{\sqrt{2*\pi}*\sigma_x} * e^{-\frac{x^2}{2*\sigma_x^2}}$$
+
+<img src="img/gauss.png" />
+
+---
+
+### Ein lokalisiertes Teilchen
+
+$$ |\Psi_0|^2 = \frac{1}{\sqrt{2*\pi}*\sigma_x} * e^{-\frac{x^2}{2*\sigma_x^2}}$$
+;$$ \Psi_0 = \frac{1}{\sqrt[4]{2*\pi}*\sqrt{\sigma_x}} * e^{-\frac{x^2}{4*\sigma_x^2}}$$
+
+;$$ \Psi_0 = A_{x0} * e^{-b_{x0}*x^2}, \frac{\partial \Psi_0}{\partial x} = -2*b_{x0}*x*\Psi_0$$
+;$$ \textcolor{red}{i*k*F(\Psi_0)} = \circlearrowleft(90\degree) * k * F(\Psi_0) =
+-\circlearrowleft(90\degree) * 2*b_{x0} * \frac{\partial}{\partial k}F(\Psi_0)
+\textcolor{red}{=-2i*b_{x0}*\frac{\partial}{\partial k}F(\Psi_0)}$$
+
+;$$ k * \psi_0 = -2*b_{x0} * \frac{\partial \psi_0}{\partial k}$$
+;$$ \frac{\partial \psi_0}{\partial k} = -\frac{k}{2*b_{x0}}$$
+;$$ \psi_0 = A_{k} *e^{-b_{k}*k^2} \Rightarrow b_k = \frac{1}{4*b_{x0}}$$
+
+---
+
+### Ein lokalisiertes Teilchen
+
+$$ \psi_0 = A_{k} *e^{-\frac{k^2}{4*b_{x0}}}$$
+;$$ |\psi_0|^2 = A_{p}^2 * e^{\frac{p^2}{2*\sigma_p^2}} $$
+;$$ \psi_0 = A_{p} * e^{-\frac{p^2}{4*\sigma_p^2}} $$
+;$$ \psi_0 = A_{k} * e^{-\frac{h^2*k^2}{4*4*\pi^2*\sigma_p^2}} = A_{k} *e^{-\frac{k^2}{4*b_{x0}}}$$
+;$$ \frac{h^2}{4*4*\pi^2*\sigma_p^2} = \frac{1}{4*b_{x0}}$$
+;$$ \frac{4*\pi^2*\sigma_p^2}{h^2} = b_{x0}$$
+
+---
+
+### Ein lokalisiertes Teilchen
+
+$$ \frac{4*\pi^2*\sigma_p^2}{h^2} = b_{x0}$$
+;$$ \frac{4*\pi^2*\sigma_p^2}{h^2} = \frac{1}{4*\sigma_x^2}$$
+;$$ \frac{2*\pi*\sigma_p}{h} = \frac{1}{2*\sigma_x}$$
+;$$ \sigma_p*\sigma_x = \frac{h}{4*\pi}$$
+
+---
+
+### Ein lokalisiertes Teilchen
+
+$$\psi = \circlearrowleft(\omega * t) * \psi_0 = \textcolor{red}{e^{i*\omega*t}*\psi_0}$$
+
+;$$ \psi = A_{k} *e^{-\frac{k^2}{4*b_{x0}}} * \circlearrowleft(-\frac{h*k^2}{4*\pi*m} * t) =
+\textcolor{red}{A_{k} *e^{-\frac{k^2}{4*b_{x0}}}*e^{-\frac{i*h*k^2}{4*\pi*m} *t}}$$

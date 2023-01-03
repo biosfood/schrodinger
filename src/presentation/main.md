@@ -308,11 +308,47 @@ e^{-i*k*x} * \Psi *dx}$$
 
 $$ \Psi = \int_{-\infty}^{\infty} \psi* \circlearrowleft(k*x)* dk \textcolor{red}{=\int_{-\infty}^{\infty} \psi*
 e^{i*k*x}*dk}$$
-$$ \psi = \int \circlearrowleft(-k*x)*\Psi*dx \textcolor{red}{=\int_{-\infty}^{\infty} \Psi*
-e^{-i*k*x}*dk}$$
+
+$$ \psi = F(\Psi) = \int_{-\infty}^{\infty} \circlearrowleft(-k*x)*\Psi*dx \textcolor{red}{=\int_{-\infty}^{\infty}
+\Psi*e^{-i*k*x}*dk}$$
 
 $$ \frac{\partial \psi}{\partial k} = \int \frac{\partial}{\partial k}\circlearrowleft(-k*x)*\Psi*dx
 \textcolor{red}{=\int_{-\infty}^{\infty} \Psi*\frac{\partial}{\partial k}e^{-i*k*x}*dk} $$
 ;$$ \frac{\partial \psi}{\partial k} = \int x*\circlearrowleft(-90\degree) * \circlearrowleft(-k*x)*\Psi*dx
 \textcolor{red}{=\int_{-\infty}^{\infty} -i*x*\Psi*e^{-i*k*x}*dk} $$
 ;$$ \frac{\partial \psi}{\partial k} = \circlearrowleft(-90\degree)*F^{-1}(\Psi*k)\textcolor{red}{=-i*F^{-1}(\Psi*k)} $$
+
+---
+
+### Impulsraum
+
+$$ \psi = F(\Psi) = \int_{-\infty}^{\infty} \circlearrowleft(-k*x)*\Psi*dx \textcolor{red}{=\int_{-\infty}^{\infty}
+\Psi*e^{-i*k*x}*dk}$$
+
+$$\textcolor{red}{i*\hbar*\frac{\partial \Psi}{\partial t}} = \circlearrowleft(90\degree)* \frac{h}{2*\pi} *
+\frac{\partial \Psi}{\partial t} = \frac{p^2}{2*m} *\Psi $$
+
+;$$\textcolor{red}{F(i*\hbar*\frac{\partial \Psi}{\partial t})} = F(\circlearrowleft(90\degree)* \frac{h}{2*\pi} *
+\frac{\partial \Psi}{\partial t}) = F(\frac{p^2}{2*m} *\Psi) $$
+
+;$$\textcolor{red}{i*\hbar*\frac{\partial \psi}{\partial t}} = \circlearrowleft(90\degree)* \frac{h}{2*\pi} *
+\frac{\partial \psi}{\partial t} = \frac{p^2}{2*m} *\psi $$
+
+;$$\textcolor{red}{i*\hbar*\frac{\partial \psi}{\partial t}} = \circlearrowleft(90\degree)* \frac{h}{2*\pi} *
+\frac{\partial \psi}{\partial t} = \frac{(\frac{h*k}{2*\pi})^2}{2*m} *\psi $$
+
+;$$\textcolor{red}{i*\hbar*\frac{\partial \psi}{\partial t}} = \circlearrowleft(90\degree)* \frac{h}{2*\pi} *
+\frac{\partial \psi}{\partial t} = \frac{h^2*k^2}{8*\pi^2*m} *\psi $$
+
+---
+
+### Impulsraum
+
+$$ \psi = F(\Psi) = \int_{-\infty}^{\infty} \circlearrowleft(-k*x)*\Psi*dx \textcolor{red}{=\int_{-\infty}^{\infty}
+\Psi*e^{-i*k*x}*dk}$$
+
+$$\textcolor{red}{i*\frac{\partial \psi}{\partial t}} = \circlearrowleft(90\degree)*
+\frac{\partial \psi}{\partial t} = \frac{h*k^2}{4*\pi*m} *\psi $$
+
+;$$\psi = \circlearrowleft(\omega * t) * \psi_0 = \textcolor{red}{e^{i*\omega*t}*\psi_0}$$
+;$$\omega = -\frac{h*k^2}{4*\pi*m}$$

@@ -405,3 +405,47 @@ $$\psi = \circlearrowleft(\omega * t) * \psi_0 = \textcolor{red}{e^{i*\omega*t}*
 
 ;$$ \psi = A_{k} *e^{-\frac{k^2}{4*b_{x0}}} * \circlearrowleft(-\frac{h*k^2}{4*\pi*m} * t) =
 \textcolor{red}{A_{k} *e^{-\frac{k^2}{4*b_{x0}}}*e^{-\frac{i*h*k^2}{4*\pi*m} *t}}$$
+
+;$$ \psi = A_{k} * e^{-\frac{k^2}{4*b_{x0}} + \ln(\circlearrowleft(-\frac{h*k^2*t}{4*\pi*m}))}$$
+;$$ \psi = A_{k} * e^{-\frac{k^2}{4*b_{x0}} -\frac{h*k^2*t}{4*\pi*m} \circlearrowleft(90\degree)}$$
+;$$ \psi = A_{k} * e^{-k^2(\frac{1}{4*b_{x0}} + \frac{h*t}{4*\pi*m} \circlearrowleft(90\degree))}\textcolor{red}{ =
+A_{k}*e^{-k^2*(\frac{1}{4*b_{x0}}+\frac{i*\hbar*t}{2*m})}}$$
+
+;$$\psi = A_{k} * e^{-c*k^2}, c =
+\sigma_x^2+\frac{h*t}{4*\pi*m}*\circlearrowleft(90\degree)\textcolor{red}{=\sigma_x^2+\frac{i\hbar*t}{2*m}} $$
+
+---
+
+### Ein lokalisiertes Teilchen
+
+$$\psi = A_{k} * e^{-c*k^2} $$
+$$ \Psi = A * e^{-\frac{x^2}{4*c}} =
+A*e^{-\frac{x^2}{4*\sigma_x^2+\frac{h*t}{\pi*m}*\circlearrowleft(90\degree)}}\textcolor{red}{=A*e^{-\frac{x^2}{4*\sigma_x^2+\frac{2i*\hbar*t}{m}}}}$$
+
+;$$ \Psi =
+A*e^{-\frac{x^2*(4*\sigma_x^2-\frac{h*t}{\pi*m}*\circlearrowleft(90\degree))}{(4*\sigma_x^2+\frac{h*t}{\pi*m}*\circlearrowleft(90\degree))*(4*\sigma_x^2-\frac{h*t}{\pi*m}*\circlearrowleft(90\degree))}}
+$$
+
+;$$ \Psi =
+A*e^{-\frac{x^2*(4*\sigma_x^2-\frac{h*t}{\pi*m}*\circlearrowleft(90\degree))}{16*\sigma_x^4+\frac{h^2*t^2}{\pi^2*m^2}}}
+$$
+
+;$$ \Psi =
+A*e^{-\frac{4*x^2*\sigma_x^2}{16*\sigma_x^4+\frac{h^2*t^2}{\pi^2*m^2}}+\frac{\frac{x^2*h*t}{\pi*m}*\circlearrowleft(90\degree))}{16*\sigma_x^4+\frac{h^2*t^2}{\pi^2*m^2}}}
+$$
+
+;$$ \Psi =
+A*e^{-\frac{x^2}{4*\sigma_x^2+\frac{h^2*t^2}{16*\pi^2*m^2*\sigma_x^2}}}*\circlearrowleft(\frac{\frac{x^2*h*t}{\pi*m}}{16*\sigma_x^4+\frac{h^2*t^2}{\pi^2*m^2}})
+$$
+
+---
+
+### Ein lokalisiertes Teilchen
+
+$$ \Psi =
+A*e^{-\frac{x^2}{4*\sigma_x^2+\frac{h^2*t^2}{16*\pi^2*m^2*\sigma_x^2}}}*\circlearrowleft(\frac{x^2}{\frac{16*\sigma_x^4*\pi*m}{h*t}+\frac{h*t}{\pi*m}})
+$$
+
+<video autoplay loop width="50%" height="50%">
+  <source src="video/localized.mp4" type="video/mp4">
+</video>

@@ -290,45 +290,45 @@ $$ \Psi_k = A*\circlearrowleft(k*x) \textcolor{red}{= A*e^{i(k*x)}}$$
 ;$$ \Psi = \sum_{i=-\infty}^{\infty} a_n *\circlearrowleft(k_n*x) \textcolor{red}{=\sum_{n=-\infty}^{\infty} a_n*
 e^{i*k_n*x}}$$
 
-;$$ \Psi = \int_{-\infty}^{\infty} \psi* \circlearrowleft(k*x)* dk \textcolor{red}{=\int_{-\infty}^{\infty} \psi*
+;$$ \Psi = \int_{-\infty}^{\infty} \phi* \circlearrowleft(k*x)* dk \textcolor{red}{=\int_{-\infty}^{\infty} \phi*
 e^{i*k*x}*dk}$$
 ;$$ \Psi = \int_{-\infty}^{\infty} \circlearrowleft(k*x)*dk * \int_{-\infty}^{\infty} \circlearrowleft(-k*x)*\Psi*dx $$
-;$$ \psi = \int_{-\infty}^{\infty} \circlearrowleft(-k*x)*\Psi*dx \textcolor{red}{=\int_{-\infty}^{\infty} \Psi*
+;$$ \phi = \int_{-\infty}^{\infty} \circlearrowleft(-k*x)*\Psi*dx \textcolor{red}{=\int_{-\infty}^{\infty} \Psi*
 e^{-i*k*x}*dk}$$
 
 ---
 
 ### Impulsraum
 
-$$ \psi = F(\Psi) = \int_{-\infty}^{\infty} \circlearrowleft(-k*x)*\Psi*dx \textcolor{red}{=\int_{-\infty}^{\infty}
+$$ \phi = F(\Psi) = \int_{-\infty}^{\infty} \circlearrowleft(-k*x)*\Psi*dx \textcolor{red}{=\int_{-\infty}^{\infty}
 \Psi*e^{-i*k*x}*dk}$$
 
-$$\textcolor{red}{i*\hbar*\frac{\partial \Psi}{\partial t}} = \circlearrowleft(90\degree)* \frac{h}{2*\pi} *
+;$$\textcolor{red}{i*\hbar*\frac{\partial \Psi}{\partial t}} = \circlearrowleft(90\degree)* \frac{h}{2*\pi} *
 \frac{\partial \Psi}{\partial t} = \frac{p^2}{2*m} *\Psi $$
 
 ;$$\textcolor{red}{F(i*\hbar*\frac{\partial \Psi}{\partial t})} = F(\circlearrowleft(90\degree)* \frac{h}{2*\pi} *
 \frac{\partial \Psi}{\partial t}) = F(\frac{p^2}{2*m} *\Psi) $$
 
-;$$\textcolor{red}{i*\hbar*\frac{\partial \psi}{\partial t}} = \circlearrowleft(90\degree)* \frac{h}{2*\pi} *
-\frac{\partial \psi}{\partial t} = \frac{p^2}{2*m} *\psi $$
+;$$\textcolor{red}{i*\hbar*\frac{\partial \phi}{\partial t}} = \circlearrowleft(90\degree)* \frac{h}{2*\pi} *
+\frac{\partial \phi}{\partial t} = \frac{p^2}{2*m} *\phi $$
 
-;$$\textcolor{red}{i*\hbar*\frac{\partial \psi}{\partial t}} = \circlearrowleft(90\degree)* \frac{h}{2*\pi} *
-\frac{\partial \psi}{\partial t} = \frac{(\frac{h*k}{2*\pi})^2}{2*m} *\psi $$
+;$$\textcolor{red}{i*\hbar*\frac{\partial \phi}{\partial t}} = \circlearrowleft(90\degree)* \frac{h}{2*\pi} *
+\frac{\partial \phi}{\partial t} = \frac{(\frac{h*k}{2*\pi})^2}{2*m} *\phi $$
 
-;$$\textcolor{red}{i*\hbar*\frac{\partial \psi}{\partial t}} = \circlearrowleft(90\degree)* \frac{h}{2*\pi} *
-\frac{\partial \psi}{\partial t} = \frac{h^2*k^2}{8*\pi^2*m} *\psi $$
+;$$\textcolor{red}{i*\hbar*\frac{\partial \phi}{\partial t}} = \circlearrowleft(90\degree)* \frac{h}{2*\pi} *
+\frac{\partial \phi}{\partial t} = \frac{h^2*k^2}{8*\pi^2*m} *\phi $$
 
 ---
 
 ### Impulsraum
 
-$$ \psi = F(\Psi) = \int_{-\infty}^{\infty} \circlearrowleft(-k*x)*\Psi*dx \textcolor{red}{=\int_{-\infty}^{\infty}
+$$ \phi = F(\Psi) = \int_{-\infty}^{\infty} \circlearrowleft(-k*x)*\Psi*dx \textcolor{red}{=\int_{-\infty}^{\infty}
 \Psi*e^{-i*k*x}*dk}$$
 
-$$\textcolor{red}{i*\frac{\partial \psi}{\partial t}} = \circlearrowleft(90\degree)*
-\frac{\partial \psi}{\partial t} = \frac{h*k^2}{4*\pi*m} *\psi $$
+$$\textcolor{red}{i*\frac{\partial \phi}{\partial t}} = \circlearrowleft(90\degree)*
+\frac{\partial \phi}{\partial t} = \frac{h*k^2}{4*\pi*m} *\phi $$
 
-;$$\psi = \circlearrowleft(\omega * t) * \psi_0 = \textcolor{red}{e^{i*\omega*t}*\psi_0}$$
+;$$\phi = \circlearrowleft(\omega * t) * \phi_0 = \textcolor{red}{e^{i*\omega*t}*\phi_0}$$
 ;$$\omega = -\frac{h*k^2}{4*\pi*m}$$
 
 ----
@@ -351,18 +351,18 @@ $$ |\Psi_0|^2 = \frac{1}{\sqrt{2*\pi}*\sigma_x} * e^{-\frac{x^2}{2*\sigma_x^2}}$
 -\circlearrowleft(90\degree) * 2*b_{x0} * \frac{\partial}{\partial k}F(\Psi_0)
 \textcolor{red}{=-2i*b_{x0}*\frac{\partial}{\partial k}F(\Psi_0)}$$
 
-;$$ k * \psi_0 = -2*b_{x0} * \frac{\partial \psi_0}{\partial k}$$
-;$$ \frac{\partial \psi_0}{\partial k} = -\frac{k}{2*b_{x0}}$$
-;$$ \psi_0 = A_{k} *e^{-b_{k}*k^2} \Rightarrow b_k = \frac{1}{4*b_{x0}}$$
+;$$ k * \phi_0 = -2*b_{x0} * \frac{\partial \phi_0}{\partial k}$$
+;$$ \frac{\partial \phi_0}{\partial k} = -\frac{k * \phi_0}{2*b_{x0}}$$
+;$$ \phi_0 = A_{k} *e^{-b_{k}*k^2} \Rightarrow b_k = \frac{1}{4*b_{x0}}$$
 
 ---
 
 ### Ein lokalisiertes Teilchen
 
-$$ \psi_0 = A_{k} *e^{-\frac{k^2}{4*b_{x0}}}$$
-;$$ |\psi_0|^2 = A_{p}^2 * e^{\frac{p^2}{2*\sigma_p^2}} $$
-;$$ \psi_0 = A_{p} * e^{-\frac{p^2}{4*\sigma_p^2}} $$
-;$$ \psi_0 = A_{k} * e^{-\frac{h^2*k^2}{4*4*\pi^2*\sigma_p^2}} = A_{k} *e^{-\frac{k^2}{4*b_{x0}}}$$
+$$ \phi_0 = A_{k} *e^{-\frac{k^2}{4*b_{x0}}}$$
+;$$ |\phi_0|^2 = A_{p}^2 * e^{\frac{p^2}{2*\sigma_p^2}} $$
+;$$ \phi_0 = A_{p} * e^{-\frac{p^2}{4*\sigma_p^2}} $$
+;$$ \phi_0 = A_{k} * e^{-\frac{h^2*k^2}{4*4*\pi^2*\sigma_p^2}} = A_{k} *e^{-\frac{k^2}{4*b_{x0}}}$$
 ;$$ \frac{h^2}{4*4*\pi^2*\sigma_p^2} = \frac{1}{4*b_{x0}}$$
 ;$$ \frac{4*\pi^2*\sigma_p^2}{h^2} = b_{x0}$$
 
@@ -379,24 +379,24 @@ $$ \frac{4*\pi^2*\sigma_p^2}{h^2} = b_{x0}$$
 
 ### Ein lokalisiertes Teilchen
 
-$$\psi = \circlearrowleft(\omega * t) * \psi_0 = \textcolor{red}{e^{i*\omega*t}*\psi_0}$$
+$$\phi = \circlearrowleft(\omega * t) * \phi_0 = \textcolor{red}{e^{i*\omega*t}*\phi_0}$$
 
-;$$ \psi = A_{k} *e^{-\frac{k^2}{4*b_{x0}}} * \circlearrowleft(-\frac{h*k^2}{4*\pi*m} * t) =
+;$$ \phi = A_{k} *e^{-\frac{k^2}{4*b_{x0}}} * \circlearrowleft(-\frac{h*k^2}{4*\pi*m} * t) =
 \textcolor{red}{A_{k} *e^{-\frac{k^2}{4*b_{x0}}}*e^{-\frac{i*h*k^2}{4*\pi*m} *t}}$$
 
-;$$ \psi = A_{k} * e^{-\frac{k^2}{4*b_{x0}} + \ln(\circlearrowleft(-\frac{h*k^2*t}{4*\pi*m}))}$$
-;$$ \psi = A_{k} * e^{-\frac{k^2}{4*b_{x0}} -\frac{h*k^2*t}{4*\pi*m} \circlearrowleft(90\degree)}$$
-;$$ \psi = A_{k} * e^{-k^2(\frac{1}{4*b_{x0}} + \frac{h*t}{4*\pi*m} \circlearrowleft(90\degree))}\textcolor{red}{ =
+;$$ \phi = A_{k} * e^{-\frac{k^2}{4*b_{x0}} + \ln(\circlearrowleft(-\frac{h*k^2*t}{4*\pi*m}))}$$
+;$$ \phi = A_{k} * e^{-\frac{k^2}{4*b_{x0}} -\frac{h*k^2*t}{4*\pi*m} \circlearrowleft(90\degree)}$$
+;$$ \phi = A_{k} * e^{-k^2(\frac{1}{4*b_{x0}} + \frac{h*t}{4*\pi*m} \circlearrowleft(90\degree))}\textcolor{red}{ =
 A_{k}*e^{-k^2*(\frac{1}{4*b_{x0}}+\frac{i*\hbar*t}{2*m})}}$$
 
-;$$\psi = A_{k} * e^{-c*k^2}, c =
+;$$\phi = A_{k} * e^{-c*k^2}, c =
 \sigma_x^2+\frac{h*t}{4*\pi*m}*\circlearrowleft(90\degree)\textcolor{red}{=\sigma_x^2+\frac{i\hbar*t}{2*m}} $$
 
 ---
 
 ### Ein lokalisiertes Teilchen
 
-$$\psi = A_{k} * e^{-c*k^2} $$
+$$\phi = A_{k} * e^{-c*k^2} $$
 $$ \Psi = A * e^{-\frac{x^2}{4*c}} =
 A*e^{-\frac{x^2}{4*\sigma_x^2+\frac{h*t}{\pi*m}*\circlearrowleft(90\degree)}}\textcolor{red}{=A*e^{-\frac{x^2}{4*\sigma_x^2+\frac{2i*\hbar*t}{m}}}}$$
 

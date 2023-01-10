@@ -63,4 +63,20 @@ def animate(i):
 ani = animation.FuncAnimation(
     fig, animate, interval=1000/framerate, blit=True, save_count = framerate * totalTime)
 ani.save(f"{outputFolder}oscillator.mp4")
-plt.show()
+
+fig, diagrammAx = plt.subplots()
+
+diagrammAx.axis("equal")
+diagrammAx.set_ylim(-1.5*A, 1.5*A)
+diagrammAx.set_xlim(-1.5*A, 1.5*A)
+diagrammAx.set_xlabel("x")
+diagrammGraph,  = diagrammAx.plot([0, 1], [0, 0], "o-")
+
+def animate(i):
+    t = i/framerate
+    x = position(t)
+    diagrammGraph.set_data([0, x], [0, 0])
+    return diagrammGraph,
+ani = animation.FuncAnimation(
+    fig, animate, interval=1000/framerate, blit=True, save_count = framerate * totalTime)
+ani.save(f"{outputFolder}oscillator_simple.mp4")

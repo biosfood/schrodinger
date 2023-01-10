@@ -4,7 +4,7 @@ import matplotlib.animation as animation
 
 outputFolder = "src/static/video/"
 
-totalTime = 12
+totalTime = 4 * 2 / 3
 framerate = 20
 
 psi = lambda x,t,n: np.sin(n*np.pi*x) * np.exp(-0.25j*n**2*np.pi*t)

@@ -7,6 +7,15 @@
 
 ### Die harmonische Schwingung
 
+
+<video autoplay loop width="50%" height="50%">
+  <source src="video/oscillator_simple.mp4" type="video/mp4">
+</video>
+
+---
+
+### Die harmonische Schwingung
+
 $$ a = \frac{d v}{dt} = \frac{F}{m} = -\frac{D*x}{m} = \frac{d^2 x}{d^2 t}$$
 ;$$ x = A*\cos(\omega * t) \Leftrightarrow \frac{d^2 x}{d^2 t} = -\frac{D*x}{m} = -\omega^2 * x $$
 ;$$\omega = \sqrt{\frac{D}{m}}$$
@@ -193,7 +202,7 @@ i*\hbar*\frac{\partial \Psi}{\partial t}}$$
 
 $$ V = 0 \forall x \in [0; l], V = \infty \forall x \notin [0; l] $$
 
-;$$ \Psi = 0 \forall x \notin [0, l], \Psi \in \mathbb{C} \forall x \in [0, l] $$
+;$$ \Psi \in \mathbb{C} \forall x \in [0, l], \Psi = 0 \forall x \notin [0, l] $$
 ;$$ \Psi = \Psi_x * \Psi_t $$
 
 ---
@@ -283,40 +292,9 @@ e^{i*k_n*x}}$$
 
 ;$$ \Psi = \int_{-\infty}^{\infty} \psi* \circlearrowleft(k*x)* dk \textcolor{red}{=\int_{-\infty}^{\infty} \psi*
 e^{i*k*x}*dk}$$
-;$$ \Psi = \int \int \circlearrowleft(-k*x)*dx * \circlearrowleft(k*x)*dk * \Psi$$
-;$$ \psi = \int \circlearrowleft(-k*x)*\Psi*dx \textcolor{red}{=\int_{-\infty}^{\infty} \Psi*
+;$$ \Psi = \int_{-\infty}^{\infty} \circlearrowleft(k*x)*dk * \int_{-\infty}^{\infty} \circlearrowleft(-k*x)*\Psi*dx $$
+;$$ \psi = \int_{-\infty}^{\infty} \circlearrowleft(-k*x)*\Psi*dx \textcolor{red}{=\int_{-\infty}^{\infty} \Psi*
 e^{-i*k*x}*dk}$$
-
----
-
-### Impulsraum
-
-$$ \Psi = \int_{-\infty}^{\infty} \psi* \circlearrowleft(k*x)* dk \textcolor{red}{=\int_{-\infty}^{\infty} \psi*
-e^{i*k*x}*dk}$$
-
-;$$ \frac{\partial \Psi}{\partial k} = \psi* \circlearrowleft(k*x) \textcolor{red}{= \psi* e^{i*k*x}}$$
-;$$ \psi = \frac{\partial}{\partial k}* \circlearrowleft(-k*x)* \Psi \textcolor{red}{= \frac{\partial
-}{\partial k}* e^{-i*k*x} * \Psi}$$
-;$$ \psi = \circlearrowleft(-90\degree) * \circlearrowleft(-k*x)* \Psi \textcolor{red}{= -i*x* e^{-i*k*x} * \Psi}$$
-;$$ \int \psi *dx = \int \circlearrowleft(-90\degree) * \circlearrowleft(-k*x)* \Psi * dx \textcolor{red}{= \int -i*x*
-e^{-i*k*x} * \Psi *dx}$$
-;$$ F(x*\Psi) = \circlearrowleft(90\degree) * F(\Psi)\textcolor{red}{= i*F(\Psi)} $$
-
----
-
-### Impulsraum
-
-$$ \Psi = \int_{-\infty}^{\infty} \psi* \circlearrowleft(k*x)* dk \textcolor{red}{=\int_{-\infty}^{\infty} \psi*
-e^{i*k*x}*dk}$$
-
-$$ \psi = F(\Psi) = \int_{-\infty}^{\infty} \circlearrowleft(-k*x)*\Psi*dx \textcolor{red}{=\int_{-\infty}^{\infty}
-\Psi*e^{-i*k*x}*dk}$$
-
-$$ \frac{\partial \psi}{\partial k} = \int \frac{\partial}{\partial k}\circlearrowleft(-k*x)*\Psi*dx
-\textcolor{red}{=\int_{-\infty}^{\infty} \Psi*\frac{\partial}{\partial k}e^{-i*k*x}*dk} $$
-;$$ \frac{\partial \psi}{\partial k} = \int x*\circlearrowleft(-90\degree) * \circlearrowleft(-k*x)*\Psi*dx
-\textcolor{red}{=\int_{-\infty}^{\infty} -i*x*\Psi*e^{-i*k*x}*dk} $$
-;$$ \frac{\partial \psi}{\partial k} = \circlearrowleft(-90\degree)*F^{-1}(\Psi*k)\textcolor{red}{=-i*F^{-1}(\Psi*k)} $$
 
 ---
 

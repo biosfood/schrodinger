@@ -9,6 +9,7 @@ const links = {
   "../../node_modules/reveal.js/plugin/math/math.js": "build/js/",
   "../../src/static/css/style.css": "build/css/",
   "../../src/static/video/oscillator.mp4": "build/video",
+  "../../src/static/video/oscillator_simple.mp4": "build/video",
   "../../src/static/video/travelling.mp4": "build/video",
   "../../src/static/video/photon.mp4": "build/video",
   "../../src/static/video/doubleSlit.mp4": "build/video",

@@ -28,18 +28,4 @@ def animate(i):
 ani = animation.FuncAnimation(
     fig, animate, interval=1000/framerate, blit=True, save_count = framerate * time)
 ani.save(f"{outputFolder}doubleSlit.mp4")
-plt.show()
-exit()
-m = 9.1093837e-31 # electron mass
-t = 1e-7 # 1 s flight time
-d = 1e-8 # 1nm distance between slits
-h = 1.054571817e-34
-
-sigma = d/10
-zeropoint = np.pi*(sigma**4+4*h**2*t**2/m**2)/(8*d*h*t/m)
-
-waveFunction = lambda x, t: sigma / np.sqrt(sigma**2+2j*h*t/m) * np.exp(-x**2/(sigma**2+2j*h*t/m))
-combined = lambda x,t: np.abs(waveFunction(x-d,t)+waveFunction(x+d,t))**2
-x = np.linspace(-10*zeropoint, 10*zeropoint, 10000)
-plt.plot(x, combined(x, t))
-zeropoint
+# plt.show()

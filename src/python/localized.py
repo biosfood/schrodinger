@@ -28,4 +28,4 @@ def animate(i):
 ani = animation.FuncAnimation(
     fig, animate, interval=1000/framerate, blit=True, save_count = framerate * time)
 ani.save(f"{outputFolder}localized.mp4")
-plt.show()
+# plt.show()

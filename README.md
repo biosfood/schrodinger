@@ -19,9 +19,9 @@ Run all python files:
 ## Building
 
 Install all necessary packages:
-```npm i```
+`npm i`
 
 Build the article files:
-```npm run build```
+`npm run build`
 
 The article build uses the [gruvbox theme](https://github.com/morhetz/gruvbox)

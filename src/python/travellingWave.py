@@ -25,6 +25,6 @@ def animate(i):
 
 
 ani = animation.FuncAnimation(
-    fig, animate, interval=1000/framerate, blit=True, save_count = framerate * totalTime)
+    fig, animate, interval=1000/framerate, blit=True, save_count = int(framerate * totalTime))
 ani.save(f"{outputFolder}travelling.mp4")
 # plt.show()
